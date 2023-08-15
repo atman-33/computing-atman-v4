@@ -6,12 +6,12 @@ ex.
 
 ```ts
 export const apiEnv: IApiEnv = {
-  isProd: process.env.OKKINO_ENV === 'production',
+  isProd: process.env.ATMAN_ENV === 'production',
   api: {
-    port: Number(process.env.OKKINO_API_PORT)
+    port: Number(process.env.ATMAN_API_PORT)
   },
   db: {
-    url: process.env.OKKINO_DB_URL
+    url: process.env.ATMAN_DB_URL
   }
 };
 
