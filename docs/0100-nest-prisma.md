@@ -1,7 +1,7 @@
 ## generate libs data-access-db 
 
 ```shell
-nx generate @nrwl/js:library --name=data-access-db --directory=api --bundler=swc --tags "scope:api"
+npx nx generate @nx/js:library data-access-db --directory=libs/api --importPath=@libs/api/data-access-db --tags=scope:api --bundler=swc
 
 ✔ Which unit test runner would you like to use? · none
 ```
@@ -81,7 +81,9 @@ volumes:
 
 ## update package.json
 
-add dockers:dev to scripts  
+add `db:dockers:dev` to scripts  
+
+> run db:dockers:dev => create db.
 
  `/package.json`
 

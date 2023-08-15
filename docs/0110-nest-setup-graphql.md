@@ -60,7 +60,6 @@ import { Module, ValidationPipe } from '@nestjs/common';
 import { APP_PIPE } from '@nestjs/core';
 import { GraphQLModule } from '@nestjs/graphql';
 import { MercuriusDriver, MercuriusDriverConfig } from '@nestjs/mercurius';
-import { UserModule } from '@okkino/api/feature-user';
 import * as path from 'path';
 
 const validationProvider = {
