@@ -4,7 +4,6 @@
 nx generate @nrwl/js:library --name=data-access-db --directory=api --bundler=swc --tags "scope:api"
 
 ✔ Which unit test runner would you like to use? · none
-✔ Which bundler would you like to use to build the library? Choose 'none' to skip build setup. · swc
 ```
 
 delete `api-data-access-db.ts`
@@ -12,7 +11,7 @@ delete `api-data-access-db.ts`
 ## install package
 
 ```shell
-npm i -D prisma env-cmd
+npm i -D prisma env-cmd prisma-nestjs-graphql
 npm i @prisma/client
 ```
 
@@ -31,6 +30,11 @@ npm i @prisma/client
 ## update index.ts
 
  `data-access-db/src/index.ts`
+
+```ts
+export * from './lib/prisma.module';
+export * from './lib/prisma.service';
+```
 
 ## update package.json
 
@@ -52,12 +56,12 @@ add db url to .env.local
  `/.env.local`
 
 ```text
-OKKINO_DB_URL=postgresql://postgres:mysecretpassword@localhost:5555/okkino-db?schema=public
+ATMAN_DB_URL=postgresql://postgres:mysecretpassword@localhost:5555/atman-db?schema=public
 ```
 
 ## create docker-compose
 
- `/tools/okkino-environment/dev.docker-compose.yml`
+ `/tools/atman-environment/dev.docker-compose.yml`
 
 ```yml
 version: '3.9'
@@ -83,7 +87,7 @@ add dockers:dev to scripts
 
 ```json
   "scripts": {
-    "db:dockers:dev": "docker-compose -f tools/okkino-environment/dev.docker-compose.yml up -d --no-recreate --remove-orphans",
+    "db:dockers:dev": "docker-compose -f tools/atman-environment/dev.docker-compose.yml up -d --no-recreate --remove-orphans",
     "db:migrate:dev": "npx env-cmd -f .env.local npx prisma migrate dev",
     "db:studio": "npx env-cmd -f .env.local npx prisma studio"
   },
@@ -91,8 +95,6 @@ add dockers:dev to scripts
 
  ## prisma migration
  migration  
- 
- 
 
 ```shell
 npm db:migrate:dev
@@ -101,8 +103,6 @@ npm db:migrate:dev
 > If you want to reset data, at first delete migration folder and then run migrate command.
 
 run prisma studio  
-
- 
 
 ```shell
 npm db:studio
