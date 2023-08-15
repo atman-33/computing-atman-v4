@@ -1,7 +1,7 @@
 ## install packages
 
 ```shell
-npm i -D @nrwl/next
+npm i -D @nx/next
 ```
 
 ## generate next web
