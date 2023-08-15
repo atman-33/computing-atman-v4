@@ -15,7 +15,10 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@libs/api/data-access-db": ["libs/api/data-access-db/src/index.ts"]
+      "@libs/api/data-access-db": ["libs/api/data-access-db/src/index.ts"],
+      "@libs/api/generated-db-types": [
+        "libs/api/generated-db-types/src/index.ts"
+      ]
     }
   },
   "exclude": ["node_modules", "tmp"]

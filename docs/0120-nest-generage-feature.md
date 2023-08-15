@@ -1,10 +1,8 @@
 ## generate types
 
 ```shell
-nx generate @nrwl/js:library --name=generated-db-types --directory=api --bundler=swc --tags "scope:api"
-```
+npx nx generate @nx/js:library generated-db-types --directory=libs/api --importPath=@libs/api/generated-db-types --tags=scope:api --bundler=swc
 
-```shell
 ✔ Which unit test runner would you like to use? · none
 ```
 
@@ -30,6 +28,8 @@ _________________________________________________
 
 ```shell
 nx generate @nrwl/js:library --name=feature-user --directory=api --bundler=swc --tags "scope:api"
+
+npx nx generate @nx/js:library feature-user --directory=libs/api --importPath=@libs/api/feature-user --tags=scope:api --bundler=swc
 
 ✔ Which unit test runner would you like to use? · jest
 ```
