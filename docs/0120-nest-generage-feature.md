@@ -1,12 +1,11 @@
 ## generate types
 
 ```shell
-nx generate @nrwl/js:library --name=generated-db-types --directory=api --tags "scope:api"
+nx generate @nrwl/js:library --name=generated-db-types --directory=api --bundler=swc --tags "scope:api"
 ```
 
 ```shell
 ✔ Which unit test runner would you like to use? · none
-✔ Which bundler would you like to use to build the library? Choose 'none' to skip build setup. · swc
 ```
 
 ### install package
@@ -30,12 +29,9 @@ _________________________________________________
 ## generate feature(ex. feature-user)
 
 ```shell
-nx generate @nrwl/js:library --name=feature-user --directory=api --tags "scope:api"
-```
+nx generate @nrwl/js:library --name=feature-user --directory=api --bundler=swc --tags "scope:api"
 
-```shell
 ✔ Which unit test runner would you like to use? · jest
-✔ Which bundler would you like to use to build the library? Choose 'none' to skip build setup. · swc
 ```
 
 ### delete files  
