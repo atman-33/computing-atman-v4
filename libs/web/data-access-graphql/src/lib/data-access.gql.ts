@@ -1,3 +1,4 @@
+/* eslint-disable unused-imports/no-unused-vars */
 /* eslint-disable @typescript-eslint/no-unused-vars */
 import { gql } from 'graphql-request';
 
@@ -11,23 +12,23 @@ const GET_USERS = gql`
   }
 `;
 
-// const GET_HOME_BLOCKS = gql`
-//   query GetHomeImages {
-//     homeBlocks {
-//       id
-//       navigationPath
-//       image {
-//         title
-//         imagePath
-//         rgbBackground {
-//           r
-//           g
-//           b
-//         }
-//       }
-//     }
-//   }
-// `;
+const GET_HOME_BLOCKS = gql`
+  query GetHomeImages {
+    homeBlocks {
+      id
+      navigationPath
+      image {
+        title
+        imagePath
+        rgbBackground {
+          r
+          g
+          b
+        }
+      }
+    }
+  }
+`;
 
 // const GET_PRODUCTS = gql`
 //   query GetProducts {
