@@ -7,9 +7,10 @@ npm i -D @nx/next
 ## generate next web
 
 ```shell
-nx g @nrwl/next:app web --tags "scope:web"
+nx g @nx/next:app web --tags "scope:web"
 
 ✔ Which stylesheet format would you like to use? · css
+✔ Which E2E test runner would you like to use? · cypress
 ✔ Would you like to use the App Router (recommended)? (Y/n) · true
 ```
 
@@ -25,22 +26,7 @@ nx migrate latest
 npm i
 ```
 
-## add appDir: true
-
- `apps/web/next.config.js`
-
-```ts
-const nextConfig = {
-  nx: {
-    // Set this to true if you would like to use SVGR
-    // See: https://github.com/gregberge/svgr
-    svgr: false,
-  },
-  experimental: {
-    appDir: true,
-  },
-};
-```
+> '23/8/16 not need appDir: true in nextConfig
 
 ## update lauout.tsx
 
