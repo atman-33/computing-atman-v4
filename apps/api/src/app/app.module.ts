@@ -1,5 +1,6 @@
 import { HomeBlockModule } from '@libs/api/feature-home-block';
 import { ProductModule } from '@libs/api/feature-product';
+import { ProductCategoryModule } from '@libs/api/feature-product-category';
 import { UserModule } from '@libs/api/feature-user';
 import { Module, ValidationPipe } from '@nestjs/common';
 import { APP_PIPE } from '@nestjs/core';
@@ -22,7 +23,8 @@ const validationProvider = {
     }),
     UserModule,
     HomeBlockModule,
-    ProductModule
+    ProductModule,
+    ProductCategoryModule
   ],
   providers: [validationProvider]
 })

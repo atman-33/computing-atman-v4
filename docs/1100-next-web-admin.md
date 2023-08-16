@@ -8,7 +8,7 @@ nx g @nx/next:app web-admin
 
 ## add scope:web tags
 
-`apps/web-admin/project.json`
+ `apps/web-admin/project.json`
 
 ## delete api folder
 
@@ -16,9 +16,9 @@ delte `apps/web-admin/app/api`
 
 ## delte global.css and module.css
 
-- delte `apps/web-admin/app/global.css`
-- delte `apps/web-admin/app/page.module.css`
-- fix import in `apps/web-admin/app/layout.tsx`
+* delte `apps/web-admin/app/global.css`
+* delte `apps/web-admin/app/page.module.css`
+* fix import in `apps/web-admin/app/layout.tsx`
 
 ```ts
 import '../styles/global.css';
@@ -26,7 +26,7 @@ import '../styles/global.css';
 
 ## add script in package.json
 
-`package.json`
+ `package.json`
 
 ```json
     "start:web-admin": "nx serve web-admin --port 3000",
@@ -36,22 +36,22 @@ import '../styles/global.css';
 
 paste from web to web-admin
 
-- apps/web/data-access
-- apps/web/environments
-- apps/web/postcss.config.js
-- apps/web/tailwind.config.js
-- apps/web/styles
+* apps/web/data-access
+* apps/web/environments
+* apps/web/postcss.config.js
+* apps/web/tailwind.config.js
+* apps/web/styles
 
 ## update files
 
-- apps/web-admin/tailwind.config.js
-- apps/web-admin/environments/environment.ts
-- apps/web-admin/data-access/graphql-client.ts
-- apps/web-admin/next.config.js
+* apps/web-admin/tailwind.config.js
+* apps/web-admin/environments/environment.ts
+* apps/web-admin/data-access/graphql-client.ts
+* apps/web-admin/next.config.js
 
 ## update page.tsx
 
-`apps/web-admin/app/page.tsx`
+ `apps/web-admin/app/page.tsx`
 
 ---
 
@@ -59,14 +59,14 @@ paste from web to web-admin
 
 ## create application at clerk.com
 
-- move to https://dashboard.clerk.com/
+* move to https://dashboard.clerk.com/
 
-- create new app
+* create new app
 
-  - application name => okkino-dev
-  - sign in => Google
+  + application name => okkino-dev
+  + sign in => Google
 
-- copy keys and paste to .env.local
+* copy keys and paste to .env.local
 
 ex.
 
@@ -83,13 +83,13 @@ npm install @clerk/nextjs
 
 ## update layout.tsx
 
-`apps/web-admin/app/layout.tsx`
+ `apps/web-admin/app/layout.tsx`
 
 > do it by Mount ClerkProvider manual at https://clerk.com/docs/nextjs/get-started-with-nextjs
 
 ## create middleware
 
-`apps/web-admin/middleware.ts`
+ `apps/web-admin/middleware.ts`
 
 ```ts
 import { authMiddleware } from '@clerk/nextjs';
@@ -113,11 +113,11 @@ export const config = {
 
 ## create folder sign-in
 
-`apps/web-admin/app/sign-in`
+ `apps/web-admin/app/sign-in`
 
 and then
 
-- create page.tsx
+* create page.tsx
 
 ## install packages to use daisyui
 
@@ -150,14 +150,14 @@ module.exports = {
 
 _use daisyui_
 
-`apps/web-admin/app/dashboard`
+ `apps/web-admin/app/dashboard`
 
-- create layout.tsx
+* create layout.tsx
 
 > reference url  
 > https://daisyui.com/components/drawer/
 
-- create page.tsx
+* create page.tsx
 
 ---
 
@@ -165,7 +165,7 @@ _use daisyui_
 
 ## gql with cookie (Next)
 
-`apps/web-admin/app/dashboard/page.tsx`
+ `apps/web-admin/app/dashboard/page.tsx`
 
 ```tsx
 export default async function DashboardPage() {
@@ -181,7 +181,7 @@ npm i @fastify/cookie
 
 ## apply cookie to main.ts (Nest)
 
-`apps/api/src/main.ts`
+ `apps/api/src/main.ts`
 
 add regiester cookie
 
@@ -209,20 +209,22 @@ npm i --save-dev @types/jsonwebtoken
 ## generate feature auth
 
 ```bash
+npx nx generate @nx/js:library api-feature-auth --directory=libs/api/feature-auth --importPath=@libs/api/feature-auth --tags=scope:api --bundler=swc
+
 nx generate @nrwl/js:library --name=feature-auth --directory=api --bundler=swc --tags "scope:api"
 
 ✔ Which unit test runner would you like to use? · jest
 ```
 
-- delete files in `libs/api/feature-auth/src/lib`
-- create `libs/api/feature-auth/src/lib/auth.guard.ts`
-- fix export in `libs/api/feature-auth/src/index.ts`
-- apply AuthGuard to resolver method.  
+* delete files in `libs/api/feature-auth/src/lib`
+* create `libs/api/feature-auth/src/lib/auth.guard.ts`
+* fix export in `libs/api/feature-auth/src/index.ts`
+* apply AuthGuard to resolver method.  
   ex. `libs/api/feature-product/src/lib/product.resolver.ts`
 
 ## get api keys from clerk.com
 
 move to `clerk.com > {your app} > API Keys > Advanced > JWT public key > PEM public key`
 
-- copy the key and paste .env.local
-  `CLERK_JWT_VERIFICATION_KEY`
+* copy the key and paste .env.local
+ `CLERK_JWT_VERIFICATION_KEY`
