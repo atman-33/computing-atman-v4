@@ -1,7 +1,7 @@
+/* eslint-disable unicorn/prefer-module */
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('node:path');
 
-/** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
     join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
@@ -9,6 +9,9 @@ module.exports = {
   ],
   theme: {
     extend: {
+      screens: {
+        '3xl': '1600px'
+      },
       colors: {
         black: '#262217',
         beigeLight: '#FFFDF8',
@@ -26,5 +29,5 @@ module.exports = {
       }
     }
   },
-  plugins: []
+  plugins: [require('tailwind-scrollbar-hide')]
 };

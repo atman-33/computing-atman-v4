@@ -48,6 +48,14 @@ and then do following.
 * add gql.
 * run graphql-codegen.
 
+## generate feature-product-length
+
+```bash
+npx nx generate @nx/js:library api-feature-product-length --directory=libs/api/feature-product-length --importPath=@libs/api/feature-product-length --tags=scope:api --bundler=swc
+```
+
+> do it as usual
+
 ---
 
 # Nextjs

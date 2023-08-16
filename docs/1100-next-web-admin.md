@@ -211,9 +211,8 @@ npm i --save-dev @types/jsonwebtoken
 ```bash
 npx nx generate @nx/js:library api-feature-auth --directory=libs/api/feature-auth --importPath=@libs/api/feature-auth --tags=scope:api --bundler=swc
 
-nx generate @nrwl/js:library --name=feature-auth --directory=api --bundler=swc --tags "scope:api"
-
 ✔ Which unit test runner would you like to use? · jest
+✔ What should be the project name and where should it be generated? · api-feature-auth @ libs/api/feature-auth
 ```
 
 * delete files in `libs/api/feature-auth/src/lib`

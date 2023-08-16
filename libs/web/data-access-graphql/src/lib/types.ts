@@ -424,16 +424,24 @@ export type IntFilter = {
 export type Mutation = {
   __typename?: 'Mutation';
   createHomeBlock: HomeBlock;
+  createProduct: Product;
   createUser: User;
   removeHomeBlock: HomeBlock;
+  removeProduct: Product;
   removeUser: User;
   updateHomeBlock: HomeBlock;
+  updateProduct: Product;
   updateUser: User;
 };
 
 
 export type MutationCreateHomeBlockArgs = {
   data: HomeBlockCreateInput;
+};
+
+
+export type MutationCreateProductArgs = {
+  data: ProductCreateInput;
 };
 
 
@@ -444,6 +452,11 @@ export type MutationCreateUserArgs = {
 
 export type MutationRemoveHomeBlockArgs = {
   where: HomeBlockWhereUniqueInput;
+};
+
+
+export type MutationRemoveProductArgs = {
+  where: ProductWhereUniqueInput;
 };
 
 
@@ -458,9 +471,40 @@ export type MutationUpdateHomeBlockArgs = {
 };
 
 
+export type MutationUpdateProductArgs = {
+  data: ProductUpdateInput;
+  where: ProductWhereUniqueInput;
+};
+
+
 export type MutationUpdateUserArgs = {
   data: UserUpdateInput;
   where: UserWhereUniqueInput;
+};
+
+export type Product = {
+  __typename?: 'Product';
+  _count: ProductCount;
+  availableColors?: Maybe<Array<RgbColor>>;
+  description?: Maybe<Scalars['String']['output']>;
+  /**
+   * @Validator.@IsInt()
+   * @Validator.@Min(1)
+   * @Validator.@Max(100_000)
+   */
+  discountPrice?: Maybe<Scalars['Int']['output']>;
+  id: Scalars['ID']['output'];
+  images?: Maybe<Array<Image>>;
+  name: Scalars['String']['output'];
+  /**
+   * @Validator.@IsInt()
+   * @Validator.@Min(1)
+   * @Validator.@Max(100_000)
+   */
+  price: Scalars['Int']['output'];
+  productCategories?: Maybe<Array<ProductCategory>>;
+  productLengths?: Maybe<Array<ProductLength>>;
+  productSizes?: Maybe<Array<ProductSize>>;
 };
 
 export type ProductAvgAggregate = {
@@ -604,6 +648,19 @@ export type ProductCountAggregate = {
   id: Scalars['Int']['output'];
   name: Scalars['Int']['output'];
   price: Scalars['Int']['output'];
+};
+
+export type ProductCreateInput = {
+  availableColors?: InputMaybe<RgbColorCreateNestedManyWithoutProductsInput>;
+  description?: InputMaybe<Scalars['String']['input']>;
+  discountPrice?: InputMaybe<Scalars['Int']['input']>;
+  id?: InputMaybe<Scalars['String']['input']>;
+  images?: InputMaybe<ImageCreateNestedManyWithoutProductInput>;
+  name: Scalars['String']['input'];
+  price: Scalars['Int']['input'];
+  productCategories?: InputMaybe<ProductCategoryCreateNestedManyWithoutProductsInput>;
+  productLengths?: InputMaybe<ProductLengthCreateNestedManyWithoutProductsInput>;
+  productSizes?: InputMaybe<ProductSizeCreateNestedManyWithoutProductsInput>;
 };
 
 export type ProductCreateNestedManyWithoutAvailableColorsInput = {
@@ -934,6 +991,19 @@ export type ProductSumAggregate = {
   price?: Maybe<Scalars['Int']['output']>;
 };
 
+export type ProductUpdateInput = {
+  availableColors?: InputMaybe<RgbColorUpdateManyWithoutProductsNestedInput>;
+  description?: InputMaybe<Scalars['String']['input']>;
+  discountPrice?: InputMaybe<Scalars['Int']['input']>;
+  id?: InputMaybe<Scalars['String']['input']>;
+  images?: InputMaybe<ImageUpdateManyWithoutProductNestedInput>;
+  name?: InputMaybe<Scalars['String']['input']>;
+  price?: InputMaybe<Scalars['Int']['input']>;
+  productCategories?: InputMaybe<ProductCategoryUpdateManyWithoutProductsNestedInput>;
+  productLengths?: InputMaybe<ProductLengthUpdateManyWithoutProductsNestedInput>;
+  productSizes?: InputMaybe<ProductSizeUpdateManyWithoutProductsNestedInput>;
+};
+
 export type ProductUpdateManyMutationInput = {
   description?: InputMaybe<Scalars['String']['input']>;
   discountPrice?: InputMaybe<Scalars['Int']['input']>;
@@ -1052,6 +1122,10 @@ export type Query = {
   __typename?: 'Query';
   homeBlock: HomeBlock;
   homeBlocks: Array<HomeBlock>;
+  product: Product;
+  productCategories: Array<ProductCategory>;
+  productLengths: Array<ProductLength>;
+  products: Array<Product>;
   user: User;
   users: Array<User>;
 };
@@ -1059,6 +1133,16 @@ export type Query = {
 
 export type QueryHomeBlockArgs = {
   where: HomeBlockWhereUniqueInput;
+};
+
+
+export type QueryProductArgs = {
+  where: ProductWhereUniqueInput;
+};
+
+
+export type QueryProductsArgs = {
+  productCategory?: InputMaybe<Scalars['String']['input']>;
 };
 
 
