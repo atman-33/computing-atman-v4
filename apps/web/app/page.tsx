@@ -4,5 +4,5 @@ export default async function Index() {
    *
    * Note: The corresponding styles are in the ./index.css file.
    */
-  return <div>Top page</div>;
+  return <div className="text-yellow-500">Top page</div>;
 }

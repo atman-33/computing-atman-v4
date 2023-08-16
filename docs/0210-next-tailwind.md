@@ -5,16 +5,18 @@ https://nx.dev/recipes/react/using-tailwind-css-in-react
 ## setup TailWind CSS
 
 ```bash
-nx g @nx/react:setup-tailwind --project=<your app here>
+nx g @nx/react:setup-tailwind --project=web
 ```
 
-## install packages
+or (following is manual ver)  
+
+### install packages
 
 ```bash
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 ```
 
-## init tailwindcss
+### init tailwindcss
 
 cd `apps/web`
 
@@ -22,7 +24,7 @@ cd `apps/web`
 npx tailwindcss init -p
 ```
 
-## update postcss.config
+### update postcss.config
 
  `apps/web/postcss.config.js`
 
