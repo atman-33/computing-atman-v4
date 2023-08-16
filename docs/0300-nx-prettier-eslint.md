@@ -1,16 +1,18 @@
 ## install packages
 
 ```bash
-npm i -D eslint@latest eslint-plugin-prettier eslint-plugin-unicorn @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-unused-imports prettier-plugin-tailwindcss
+npm i -D eslint eslint-plugin-prettier eslint-plugin-unicorn @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-unused-imports prettier-plugin-tailwindcss
 ```
 
 > if you have some errors, install proper version packages manually.
 
-ex.  
+ex. add below packages manually to package.json after that, install again.
 
 ```bash
-npm i -D prettier@latest --force
-npm i -D @typescript-eslint/eslint-plugin --force
+  "devDependencies": {
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-unused-imports": "^2.0.0",
+    "prettier-plugin-tailwindcss": "^0.2.2",
 ```
 
 ## eslint works on vscode

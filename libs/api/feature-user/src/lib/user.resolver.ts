@@ -3,7 +3,7 @@ import {
   DeleteOneUserArgs,
   FindUniqueUserArgs,
   UpdateOneUserArgs,
-  User,
+  User
 } from '@libs/api/generated-db-types';
 import { Args, Mutation, Query, Resolver } from '@nestjs/graphql';
 import { UserService } from './user.service';

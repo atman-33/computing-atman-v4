@@ -3,7 +3,7 @@ import {
   CreateOneUserArgs,
   DeleteOneUserArgs,
   FindUniqueUserArgs,
-  UpdateOneUserArgs,
+  UpdateOneUserArgs
 } from '@libs/api/generated-db-types';
 import { Injectable } from '@nestjs/common';
 import * as bcrypt from 'bcrypt';
@@ -19,8 +19,8 @@ export class UserService {
     return this.prisma.user.create({
       data: {
         ...data,
-        password: hashedPassword,
-      },
+        password: hashedPassword
+      }
     });
   }
 
