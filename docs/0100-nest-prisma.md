@@ -1,4 +1,4 @@
-## generate libs data-access-db 
+## generate libs data-access-db
 
 ```bash
 npx nx generate @nx/js:library data-access-db --directory=libs/api --importPath=@libs/api/data-access-db --tags=scope:api --bundler=swc
@@ -17,19 +17,19 @@ npm i @prisma/client
 
 ## generate schema.prisma
 
- `data-access-db/src/lib/schema.prisma`
+`data-access-db/src/lib/schema.prisma`
 
 ## generate prisma.service.ts
 
- `data-access-db/src/lib/prisma.service.ts`
+`data-access-db/src/lib/prisma.service.ts`
 
 ## generate prisma.module.ts
 
- `data-access-db/src/lib/prisma.module.ts`
+`data-access-db/src/lib/prisma.module.ts`
 
 ## update index.ts
 
- `data-access-db/src/index.ts`
+`data-access-db/src/index.ts`
 
 ```ts
 export * from './lib/prisma.module';
@@ -38,7 +38,7 @@ export * from './lib/prisma.service';
 
 ## update package.json
 
- `/package.json`
+`/package.json`
 
 ```json
   ...
@@ -51,9 +51,9 @@ export * from './lib/prisma.service';
 
 ## create .env.local
 
-add db url to .env.local  
+add db url to .env.local
 
- `/.env.local`
+`/.env.local`
 
 ```text
 ATMAN_DB_URL=postgresql://postgres:mysecretpassword@localhost:5555/atman-db?schema=public
@@ -61,7 +61,7 @@ ATMAN_DB_URL=postgresql://postgres:mysecretpassword@localhost:5555/atman-db?sche
 
 ## create docker-compose
 
- `/tools/atman-environment/dev.docker-compose.yml`
+`/tools/atman-environment/dev.docker-compose.yml`
 
 ```yml
 version: '3.9'
@@ -81,11 +81,11 @@ volumes:
 
 ## update package.json
 
-add `db:dockers:dev` to scripts  
+add `db:dockers:dev` to scripts
 
 > run db:dockers:dev => create db.
 
- `/package.json`
+`/package.json`
 
 ```json
   "scripts": {
@@ -93,19 +93,20 @@ add `db:dockers:dev` to scripts
     "db:migrate:dev": "npx env-cmd -f .env.local npx prisma migrate dev",
     "db:studio": "npx env-cmd -f .env.local npx prisma studio"
   },
- ```
+```
 
- ## prisma migration
- migration  
+## prisma migration
+
+migration
 
 ```bash
 npm db:migrate:dev
- ```
+```
 
 > If you want to reset data, at first delete migration folder and then run migrate command.
 
-run prisma studio  
+run prisma studio
 
 ```bash
 npm db:studio
- ```
+```

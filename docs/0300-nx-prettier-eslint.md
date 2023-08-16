@@ -17,12 +17,12 @@ ex. add below packages manually to package.json after that, install again.
 
 ## eslint works on vscode
 
-* install eslint extention
-* restart vscode
+- install eslint extention
+- restart vscode
 
 ## setup .prettierrc
 
- `.prettierrc`
+`.prettierrc`
 
 ```json
 {
@@ -35,7 +35,7 @@ ex. add below packages manually to package.json after that, install again.
 
 ## setup .prettierignore
 
- `.prettierignore`
+`.prettierignore`
 
 ```text
 # Add files here to ignore them from prettier formatting
@@ -51,7 +51,7 @@ libs/api/generated-db-types/src/index.ts
 
 ## setup .eslintignore
 
- `.eslintignore`
+`.eslintignore`
 
 ```text
 node_modules
@@ -63,7 +63,7 @@ libs/api/generated-db-types/src/index.ts
 
 ## setup .eslintrc.json
 
- `eslintrc.json`
+`eslintrc.json`
 
 ```json
 {

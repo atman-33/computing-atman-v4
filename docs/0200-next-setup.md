@@ -16,8 +16,8 @@ nx g @nx/next:app web --tags "scope:web"
 
 ## delete files
 
-* `apps/web/app/global.css`
-* `apps/web/app/page.module.css`
+- `apps/web/app/global.css`
+- `apps/web/app/page.module.css`
 
 ## nx migrate latest
 
@@ -30,7 +30,7 @@ npm i
 
 ## update lauout.tsx
 
- `apps/web/app/layout.tsx`
+`apps/web/app/layout.tsx`
 
 ```ts
 import { ReactNode } from 'react';
@@ -38,7 +38,7 @@ import { ReactNode } from 'react';
 export default function RootLayout({
   // Layouts must accept a children prop.
   // This will be populated with nested layouts or pages
-  children,
+  children
 }: {
   children: ReactNode;
 }) {
@@ -52,22 +52,22 @@ export default function RootLayout({
 
 ## create Head
 
- `apps/web/app/head.tsx`
+`apps/web/app/head.tsx`
 
 ```ts
 export default function Head() {
-    return (
-        <>
-            <title>My Next.js App</title>
-            <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        </>
-    );
+  return (
+    <>
+      <title>My Next.js App</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    </>
+  );
 }
 ```
 
 ## update page.tsx
 
- `apps/web/app/page.tsx`
+`apps/web/app/page.tsx`
 
 ```ts
 export default function Page() {

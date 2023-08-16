@@ -2,19 +2,19 @@
 
 ## serve command
 
-run dev backend  
+run dev backend
 
 ```bash
 nx serve api
 ```
 
-run dev frontend  
+run dev frontend
 
 ```bash
 nx serve web
 ```
 
-run dev front and back  
+run dev front and back
 
 ```bash
 npm run dev
@@ -28,13 +28,13 @@ nx build web
 
 ## stop listening server
 
-check PID  
+check PID
 
 ```bash
 lsof -i :3000
 ```
 
-kill PID  
+kill PID
 
 ```bash
 kill <PID>
@@ -78,7 +78,7 @@ npm i
 npm i next@latest
 ```
 
-_________________________________________________
+---
 
 # Angular
 
@@ -98,7 +98,7 @@ nx generate @nx/angular:component <component-name> --project=web
 
 > outside of nx, ng g component <component-name>
 
-_________________________________________________
+---
 
 # NestJS
 

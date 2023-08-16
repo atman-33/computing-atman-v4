@@ -26,5 +26,5 @@ _________________________________________________
 
 1. add env on `.env.local`
 2. update `environment.ts` in projects
-3. update `validate-xxx-env.ts`
+3. update `tools/environment/validate-api(or web)-env.ts`
 4. validate env by script (ex. validate:web-env)

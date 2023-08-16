@@ -10,8 +10,8 @@ nx generate @nrwl/js:library --name=feature-image --directory=api --bundler=swc 
 
 ## delete generated files
 
-* `api-feature-image.spec.ts`
-* `api-feature-image.ts`
+- `api-feature-image.spec.ts`
+- `api-feature-image.ts`
 
 ## generate module, controller and service
 
@@ -25,21 +25,21 @@ nx generate @nx/nest:service --project=api-feature-image --name image
 
 ## move module etc files to lib folder
 
-* move files
-* delete image folders
+- move files
+- delete image folders
 
 ## update files
 
-* `libs/api/feature-image/src/lib/image.controller.ts`
-    - add endpoint
-* `libs/api/feature-image/src/lib/image.service.ts`
-    - add logic
-* `libs/api/feature-image/src/index.ts`
-    - fix export
-* `apps/api/src/app/app.module.ts`
-    - add generated module to imports
+- `libs/api/feature-image/src/lib/image.controller.ts`
+  - add endpoint
+- `libs/api/feature-image/src/lib/image.service.ts`
+  - add logic
+- `libs/api/feature-image/src/index.ts`
+  - fix export
+- `apps/api/src/app/app.module.ts`
+  - add generated module to imports
 
-_________________________________________________
+---
 
 # Nextjs
 
@@ -47,8 +47,8 @@ _________________________________________________
 
 add URL and ENDPOINT on env, and then update files (following)
 
-* `.env.local`
-ex.  
+- `.env.local`
+  ex.
 
 ```text
 OKKINO_WEB_STORAGE_URL=http://localhost:3333/images
@@ -56,16 +56,16 @@ OKKINO_WEB_STORAGE_ENDPOINT=localhost:3333/images
 OKKINO_WEB_STORAGE_HOSTNAME=localhost:3333
 ```
 
-* `apps/web/environments/environment.ts`
-* `tools/environment/validate-web-env.ts`
+- `apps/web/environments/environment.ts`
+- `tools/environment/validate-web-env.ts`
 
 ## update nextConfig
 
-add images to nextConfig       
+add images to nextConfig
 
- `apps/web/next.config.js`
+`apps/web/next.config.js`
 
-ex. (localhost ver)  
+ex. (localhost ver)
 
 ```ts
 const nextConfig = {
@@ -84,9 +84,9 @@ const nextConfig = {
 
 ## use Image
 
- `page.tsx`
+`page.tsx`
 
-ex.  
+ex.
 
 ```tsx
 const { storage } = webEnv;

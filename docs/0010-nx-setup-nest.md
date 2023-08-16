@@ -30,7 +30,7 @@ npx create-nx-workspace@latest
 
 ## add scope:api tag
 
- `apps/api/project.json`
+`apps/api/project.json`
 
 ```json
   "tags": [
@@ -40,7 +40,7 @@ npx create-nx-workspace@latest
 
 ## add start scripts
 
- `package.json`
+`package.json`
 
 ```json
   ...
@@ -51,7 +51,7 @@ npx create-nx-workspace@latest
     "start:web": "nx serve web",
    "----NX SECTION----": "-------------------------",
     "build": "nx build",
-    "test": "nx test",    
+    "test": "nx test",
     "----TOOLS SECTION----": "-------------------------",
     "verify": "nx affected:lint --fix --all && nx format:write && nx format:check && nx affected --target=lint --fix --parallel=3 && npx nx affected --target=test --parallel=3 && nx affected --target=build --parallel=3 --exclude=web"
   ...

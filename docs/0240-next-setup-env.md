@@ -1,6 +1,6 @@
 ## create environment.ts
 
- `apps/web/environments/environment.ts`
+`apps/web/environments/environment.ts`
 
 ```ts
 export const webEnv: IWebEnv = {
@@ -20,7 +20,7 @@ export interface IWebEnv {
 
 ## add webEnv
 
- `apps/web/data-access/graphql-client.ts`
+`apps/web/data-access/graphql-client.ts`
 
 ```ts
 import { getGraphqlClient } from '@libs/web/data-access-graphql';

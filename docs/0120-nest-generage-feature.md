@@ -14,7 +14,7 @@ npm i -D prisma-nestjs-graphql
 
 ### setting generator nestgraphql to schema.prisma
 
- `libs/api/data-access-db/src/lib/schema.prisma`
+`libs/api/data-access-db/src/lib/schema.prisma`
 
 ### prisma generate
 
@@ -22,7 +22,7 @@ npm i -D prisma-nestjs-graphql
 npx prisma generate
 ```
 
-_________________________________________________
+---
 
 ## generate feature(ex. feature-user)
 
@@ -34,24 +34,24 @@ npx nx generate @nx/js:library feature-user --directory=libs/api --importPath=@l
 ✔ Which unit test runner would you like to use? · jest
 ```
 
-### delete files  
+### delete files
 
-* `api-feature-user.spec.ts`
-* `api-feature-user.ts`
+- `api-feature-user.spec.ts`
+- `api-feature-user.ts`
 
-### generate resolver  
+### generate resolver
 
 ```bash
 nx g @nrwl/nest:resource --project=api-feature-user --directory=lib --type="graphql-code-first" --crud --name user
 ```
 
-### arange 
+### arange
 
-* move to generated files to lib folder  
-* delete user folder
-* delete dto folder
-* delete entities folder
-* fix export in index.ts  
+- move to generated files to lib folder
+- delete user folder
+- delete dto folder
+- delete entities folder
+- fix export in index.ts
 
 ```ts
 export * from './lib/user.module';
@@ -59,7 +59,7 @@ export * from './lib/user.module';
 
 ### update user.module.ts
 
-add PrismaModule to user.module.ts  
+add PrismaModule to user.module.ts
 
 ```ts
 ...
@@ -72,17 +72,17 @@ add PrismaModule to user.module.ts
 
 ### update user.resolver.ts
 
-* change method name: findAll() => users()
-* change method name: findOne() => user()
-* change args, types as generated-db-types names
+- change method name: findAll() => users()
+- change method name: findOne() => user()
+- change args, types as generated-db-types names
 
 ### update user.service.ts
 
-* add di PrismaService  
-* change methods to use PrismaService
-* change args, types as generated-db-types names
+- add di PrismaService
+- change methods to use PrismaService
+- change args, types as generated-db-types names
 
-> If you need relation to get another table data, not forget to use include! 
+> If you need relation to get another table data, not forget to use include!
 
 ### add UserModule to AppModule
 

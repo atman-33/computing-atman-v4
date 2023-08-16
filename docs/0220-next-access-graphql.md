@@ -10,10 +10,10 @@ npx nx generate @nx/js:library data-access-graphql --directory=libs/web --import
 ## install packages
 
 ```bash
-npm i -D graphql-codegen @graphql-codegen/cli @graphql-codegen/near-operation-file-preset @graphql-codegen/typed-document-node @graphql-codegen/typescript-operations @graphql-codegen/typescript @graphql-codegen/typescript-graphql-request 
+npm i -D graphql-codegen @graphql-codegen/cli @graphql-codegen/near-operation-file-preset @graphql-codegen/typed-document-node @graphql-codegen/typescript-operations @graphql-codegen/typescript @graphql-codegen/typescript-graphql-request
 ```
 
-> not install @parcel/watcher because installed with nx 
+> not install @parcel/watcher because installed with nx
 
 ```bash
 npm i graphql-request
@@ -21,7 +21,7 @@ npm i graphql-request
 
 ## create codegen.yml
 
- `tools/graphql-codegen/codegen.yml`
+`tools/graphql-codegen/codegen.yml`
 
 ```yml
 overwrite: true
@@ -52,7 +52,7 @@ generates:
 
 ## add script to package.json
 
- `package.json`
+`package.json`
 
 ```json
 "scripts": {
@@ -65,9 +65,9 @@ generates:
 
 > delete web-data-access-graphql.ts because not need.
 
- `libs/web/data-access-graphql/src/lib/data-access.gql.ts`
+`libs/web/data-access-graphql/src/lib/data-access.gql.ts`
 
-ex.  
+ex.
 
 ```ts
 import { gql } from 'graphql-request';
@@ -85,32 +85,35 @@ const GET_USERS = gql`
 
 ## generate data-access.gql.gen.ts
 
-* create `data-access.gql.ts`  
-* run script "gen:gql-client"
+- create `data-access.gql.ts`
+- run script "gen:gql-client"
 
 after that generated `data-access.gql.gen.ts` and `types.ts`
 
 ## create get-graphql-client.ts
 
- `libs/web/data-access-graphql/src/lib/get-graphql-client.ts`
+`libs/web/data-access-graphql/src/lib/get-graphql-client.ts`
 
 ```ts
 import { GraphQLClient } from 'graphql-request';
 import { GraphQLClientRequestHeaders, MaybeLazy } from 'graphql-request/build/esm/types';
 import { getSdk } from './data-access.gql.gen';
 
-export const getGraphqlClient = (url: string, headers?: MaybeLazy<GraphQLClientRequestHeaders> | undefined) => {
-    const client = new GraphQLClient(url, {
-        headers
-    });
+export const getGraphqlClient = (
+  url: string,
+  headers?: MaybeLazy<GraphQLClientRequestHeaders> | undefined
+) => {
+  const client = new GraphQLClient(url, {
+    headers
+  });
 
-    return getSdk(client);
+  return getSdk(client);
 };
 ```
 
 ## update index.ts
 
- `libs/web/data-access-graphql/src/index.ts`
+`libs/web/data-access-graphql/src/index.ts`
 
 ```ts
 export * from './lib/data-access.gql.gen';
@@ -119,15 +122,15 @@ export * from './lib/get-graphql-client';
 
 ## create graphql-client.ts in web
 
- `apps/web/data-access/graphql-client.ts`
+`apps/web/data-access/graphql-client.ts`
 
 ```ts
 import { getGraphqlClient } from '@libs/web/data-access-graphql';
 
-export const gql = getGraphqlClient("http://localhost:3000/graphql");
+export const gql = getGraphqlClient('http://localhost:3000/graphql');
 ```
 
-## use graphql-client  
+## use graphql-client
 
 ex. `page.tsx`
 

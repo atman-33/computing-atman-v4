@@ -7,7 +7,7 @@ npm i bcrypt
 npm i -D @types/bcrypt
 ```
 
-add bcrypt.hash in user.service.ts  
+add bcrypt.hash in user.service.ts
 
 ```ts
 @Injectable()
@@ -28,7 +28,7 @@ export class UserService {
   ...
 ```
 
-_________________________________________________
+---
 
 ## helmet
 
@@ -38,10 +38,10 @@ _________________________________________________
 npm i --save @fastify/helmet
 ```
 
-* register helmet  
-* enable cors
+- register helmet
+- enable cors
 
- `apps/api/src/main.ts`
+`apps/api/src/main.ts`
 
 ```ts
 ...

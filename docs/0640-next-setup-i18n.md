@@ -8,32 +8,32 @@ npm i server-only
 
 ## create i18n-config
 
- `apps/web/i18n/i18n-config.ts`
+`apps/web/i18n/i18n-config.ts`
 
 ## create middleware
 
- `apps/web/middleware.ts`
+`apps/web/middleware.ts`
 
 ## create get-dictionary
 
- `apps/web/i18n/get-dictionary.ts`
+`apps/web/i18n/get-dictionary.ts`
 
 ## create dictionaries
 
-* `apps/web/i18n/dictionaries/en.json`
-* `apps/web/i18n/dictionaries/ja.json`
+- `apps/web/i18n/dictionaries/en.json`
+- `apps/web/i18n/dictionaries/ja.json`
 
 ## create `[lang]` folder
 
-* create `apps/web/app/[lang]`
-* move files to that folder
-    - page.tsx
-    - layout.tsx
-    - head.tsx
+- create `apps/web/app/[lang]`
+- move files to that folder
+  - page.tsx
+  - layout.tsx
+  - head.tsx
 
-ex.  
+ex.
 
- `apps/web/app/[lang]/layout.tsx`
+`apps/web/app/[lang]/layout.tsx`
 
 ```tsx
 import { Lato } from '@next/font/google';
@@ -95,7 +95,7 @@ export default async function RootLayout({
 
 ## create locale-switcher
 
-* create `apps/web/app/[lang]/components/locale-switcher.tsx`
+- create `apps/web/app/[lang]/components/locale-switcher.tsx`
 
-* add `LocalSwitcher` on layout.tsx
- `apps/web/app/[lang]/layout.tsx`
+- add `LocalSwitcher` on layout.tsx
+  `apps/web/app/[lang]/layout.tsx`

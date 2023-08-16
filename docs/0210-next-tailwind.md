@@ -8,7 +8,7 @@ https://nx.dev/recipes/react/using-tailwind-css-in-react
 nx g @nx/react:setup-tailwind --project=web
 ```
 
-or (following is manual ver)  
+or (following is manual ver)
 
 ### install packages
 
@@ -26,66 +26,60 @@ npx tailwindcss init -p
 
 ### update postcss.config
 
- `apps/web/postcss.config.js`
+`apps/web/postcss.config.js`
 
 ```js
-const {
-    join
-} = require('path');
+const { join } = require('path');
 
 module.exports = {
-    plugins: {
-        tailwindcss: {
-            config: join(__dirname, 'tailwind.config.js'),
-        },
-        autoprefixer: {},
+  plugins: {
+    tailwindcss: {
+      config: join(__dirname, 'tailwind.config.js')
     },
+    autoprefixer: {}
+  }
 };
 ```
 
-## update tailwind.config  
+## update tailwind.config
 
- `apps/web/tailwind.config.js`
+`apps/web/tailwind.config.js`
 
 ```js
-const {
-    createGlobPatternsForDependencies
-} = require('@nx/react/tailwind');
-const {
-    join
-} = require('node:path');
+const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
+const { join } = require('node:path');
 
 module.exports = {
-    content: [
-        join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
-        ...createGlobPatternsForDependencies(__dirname)
-    ],
-    theme: {
-        extend: {
-            colors: {
-                black: '#262217',
-                beigeLight: '#FFFDF8',
-                gray: {
-                    100: '#EAE9E8',
-                    200: '#D4D3D1',
-                    300: '#BEBDBA',
-                    400: '#A8A7A2',
-                    500: '#93918B',
-                    600: '#7D7A74',
-                    700: '#68655D',
-                    800: '#514E45',
-                    900: '#3C392F'
-                }
-            }
-        },
-        plugins: []
-    }
+  content: [
+    join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
+    ...createGlobPatternsForDependencies(__dirname)
+  ],
+  theme: {
+    extend: {
+      colors: {
+        black: '#262217',
+        beigeLight: '#FFFDF8',
+        gray: {
+          100: '#EAE9E8',
+          200: '#D4D3D1',
+          300: '#BEBDBA',
+          400: '#A8A7A2',
+          500: '#93918B',
+          600: '#7D7A74',
+          700: '#68655D',
+          800: '#514E45',
+          900: '#3C392F'
+        }
+      }
+    },
+    plugins: []
+  }
 };
 ```
 
-## create global.css  
+## create global.css
 
- `apps/web/styles/global.css`
+`apps/web/styles/global.css`
 
 ```css
 @tailwind base;
@@ -95,7 +89,7 @@ module.exports = {
 
 ## import global.css in layout.tsx
 
- `apps/web/app/layout.tsx`
+`apps/web/app/layout.tsx`
 
 ```tsx
 import { ReactNode } from 'react';
@@ -107,10 +101,10 @@ export default function RootLayout({
 
 ## add postcss.config to project.json
 
-* on targets.build.options
-* on targets.serve.options
+- on targets.build.options
+- on targets.serve.options
 
- `apps/web/project.json`
+`apps/web/project.json`
 
 ```json
   "targets": {
@@ -132,7 +126,7 @@ export default function RootLayout({
         "buildTarget": "web:build",
         "dev": true,
 +       "postcssConfig": "apps/web/postcss.config.js"
-      },  
+      },
 ```
 
 ## use tailwind-scrollbar-hide
@@ -145,19 +139,19 @@ update tailwind.config.js
  `apps/web/tailwind.config.js`
 
 ```js
-  plugins: [require('tailwind-scrollbar-hide')]
+plugins: [require('tailwind-scrollbar-hide')];
 ```
 
 ## if not apply tailwindcss
 
 if not aply taiwindcss, some bugs happens...  
-once change global.css  
+once change global.css
 
-ex.   
+ex.
 
 ```css
 .test {
-    martin: 10rem
+  martin: 10rem;
 }
 ```
 

@@ -1,23 +1,23 @@
 ## add product-category model
 
-* add product-category model to `libs/api/data-access-db/src/lib/schema.prisma`
-* db migrate
+- add product-category model to `libs/api/data-access-db/src/lib/schema.prisma`
+- db migrate
 
 ## add seed-data.prod
 
- `tools/database/seed-data.prod.ts`
+`tools/database/seed-data.prod.ts`
 
 ## update seed.dev.ts
 
-add Promise.all PRODUCT_CATEGORIES  
+add Promise.all PRODUCT_CATEGORIES
 
- `tools/database/seed.dev.ts`
+`tools/database/seed.dev.ts`
 
 ## update seed-data.ts
 
 add productCategories to PRODUCT_DATA
 
- `tools/database/seed-data.ts`
+`tools/database/seed-data.ts`
 
 ## run db seed script
 
@@ -39,23 +39,23 @@ nx g @nrwl/nest:resource --project=api-feature-product-category --type="graphql-
 
 and then do following.
 
-* delete no need files.
-* fix export in index.ts.
-* update AppModule(NestJS).
-* update resolver.
-* update service.
-* add PrismaService to providers in module.
-* add gql.
-* run graphql-codegen.
+- delete no need files.
+- fix export in index.ts.
+- update AppModule(NestJS).
+- update resolver.
+- update service.
+- add PrismaService to providers in module.
+- add gql.
+- run graphql-codegen.
 
-_________________________________________________
+---
 
 # Nextjs
 
 ## add product-category
 
- `apps/web/app/[lang]/layout.tsx`
+`apps/web/app/[lang]/layout.tsx`
 
 ## add menu
 
- `apps/web/app/[lang]/components/menu`
+`apps/web/app/[lang]/components/menu`
