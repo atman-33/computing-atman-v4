@@ -1,16 +1,16 @@
 ## install packages
 
+> From version 13.2 onward, next/font has been built into Next.js so not nedd install @next/font!
+
 ```bash
 npm i @next/font
 ```
-
-> From version 13.2 onward, next/font has been built into Next.js so not nedd install @next/font!
 
 ## use font
 
 ex.
 
-`apps/web/app/layout.tsx`
+ `apps/web/app/layout.tsx`
 
 ```tsx
 import { Lato } from '@next/font/google';

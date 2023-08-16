@@ -20,7 +20,8 @@
       "@libs/api/feature-image": ["libs/api/feature-image/src/index.ts"],
       "@libs/api/feature-user": ["libs/api/feature-user/src/index.ts"],
       "@libs/api/generated-db-types": ["libs/api/generated-db-types/src/index.ts"],
-      "@libs/web/data-access-graphql": ["libs/web/data-access-graphql/src/index.ts"]
+      "@libs/web/data-access-graphql": ["libs/web/data-access-graphql/src/index.ts"],
+      "@libs/web/utils-shared": ["libs/web/utils-shared/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]
