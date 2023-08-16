@@ -5,7 +5,8 @@ export const webEnv: IWebEnv = {
   },
   storage: {
     url: process.env.ATMAN_WEB_STORAGE_URL as string,
-    endpoint: process.env.ATMAN_WEB_STORAGE_ENDPOINT as string
+    endpoint: process.env.ATMAN_WEB_STORAGE_ENDPOINT as string,
+    hostname: process.env.ATMAN_WEB_STORAGE_HOSTNAME as string
   }
 };
 
@@ -17,5 +18,6 @@ export interface IWebEnv {
   storage: {
     url: string;
     endpoint: string;
+    hostname: string;
   };
 }

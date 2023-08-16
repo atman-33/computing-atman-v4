@@ -17,12 +17,12 @@ ex. add below packages manually to package.json after that, install again.
 
 ## eslint works on vscode
 
-- install eslint extention
-- restart vscode
+* install eslint extention
+* restart vscode
 
 ## setup .prettierrc
 
-`.prettierrc`
+ `.prettierrc`
 
 ```json
 {
@@ -35,13 +35,14 @@ ex. add below packages manually to package.json after that, install again.
 
 ## setup .prettierignore
 
-`.prettierignore`
+ `.prettierignore`
 
 ```text
 # Add files here to ignore them from prettier formatting
 
 /dist
 /coverage
+/docs
 
 # Ignore all files that generated
 libs/web/data-access-graphql/src/lib/data-access.gql.gen.ts
@@ -51,10 +52,11 @@ libs/api/generated-db-types/src/index.ts
 
 ## setup .eslintignore
 
-`.eslintignore`
+ `.eslintignore`
 
 ```text
 node_modules
+docs
 
 libs/web/data-access-graphql/src/lib/data-access.gql.gen.ts
 libs/web/data-access-graphql/src/lib/types.ts
@@ -63,7 +65,7 @@ libs/api/generated-db-types/src/index.ts
 
 ## setup .eslintrc.json
 
-`eslintrc.json`
+ `eslintrc.json`
 
 ```json
 {

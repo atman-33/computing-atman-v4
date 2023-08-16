@@ -28,6 +28,9 @@ class WebStorageVo {
 
   @IsString()
   public endpoint: string;
+
+  @IsString()
+  public hostname: string;
 }
 
 class WebEnvApiVo {

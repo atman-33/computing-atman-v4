@@ -1,6 +1,7 @@
 # Add files here to ignore them from prettier formatting
 /dist
 /coverage
+/docs
 
 # Ignore all files that generated
 libs/web/data-access-graphql/src/lib/data-access.gql.gen.ts
