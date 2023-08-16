@@ -2,9 +2,15 @@
 
 https://nx.dev/recipes/react/using-tailwind-css-in-react
 
+## setup TailWind CSS
+
+```bash
+nx g @nx/react:setup-tailwind --project=<your app here>
+```
+
 ## install packages
 
-```shell
+```bash
 npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 ```
 
@@ -12,7 +18,7 @@ npm install -D tailwindcss@latest postcss@latest autoprefixer@latest
 
 cd `apps/web`
 
-```shell
+```bash
 npx tailwindcss init -p
 ```
 
@@ -129,7 +135,7 @@ export default function RootLayout({
 
 ## use tailwind-scrollbar-hide
 
-```shell
+```bash
 npm install tailwind-scrollbar-hide
 ```
 

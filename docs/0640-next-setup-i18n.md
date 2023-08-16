@@ -1,6 +1,6 @@
 ## install packages
 
-```shell
+```bash
 npm i --save-dev @types/negotiator
 npm i @formatjs/intl-localematcher
 npm i server-only

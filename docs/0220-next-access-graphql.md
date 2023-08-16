@@ -1,6 +1,6 @@
 ## generate data-access-graphql
 
-```shell
+```bash
 nx generate @nrwl/js:library --name=data-access-graphql --directory=web --tags "scope:web"
 
 ✔ Which unit test runner would you like to use? · none
@@ -9,11 +9,11 @@ nx generate @nrwl/js:library --name=data-access-graphql --directory=web --tags "
 
 ## install packages
 
-```shell
+```bash
 npm i -D graphql-codegen @graphql-codegen/cli @graphql-codegen/near-operation-file-preset @graphql-codegen/typed-document-node @graphql-codegen/typescript-operations @graphql-codegen/typescript @graphql-codegen/typescript-graphql-request @parcel/watcher
 ```
 
-```shell
+```bash
 npm i graphql-request
 ```
 

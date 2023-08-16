@@ -2,7 +2,7 @@
 
 ## add feature libary
 
-```shell
+```bash
 nx generate @nrwl/js:library --name=feature-image --directory=api --bundler=swc --tags "scope:api"
 
 ✔ Which unit test runner would you like to use? · jest
@@ -15,7 +15,7 @@ nx generate @nrwl/js:library --name=feature-image --directory=api --bundler=swc 
 
 ## generate module, controller and service
 
-```shell
+```bash
 nx generate @nx/nest:module --project=api-feature-image --name image
 
 nx generate @nx/nest:controller --project=api-feature-image --name image

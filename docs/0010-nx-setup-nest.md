@@ -2,7 +2,7 @@
 
 open shell
 
-```shell
+```bash
 cd ~/Sites
 ```
 
@@ -10,13 +10,13 @@ cd ~/Sites
 
 ## install yarn (if you like yarn)
 
-```shell
+```bash
 npm i -g yarn
 ```
 
 ## create nx workspace Nestjs app
 
-```shell
+```bash
 npx create-nx-workspace@latest
 
 ✔ Where would you like to create your workspace? · computing-atman-v4

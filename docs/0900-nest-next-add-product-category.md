@@ -27,13 +27,13 @@ add productCategories to PRODUCT_DATA
 
 ## generate feature-product-category
 
-```shell
+```bash
 nx generate @nrwl/js:library --name=feature-product-category --directory=api --bundler=swc --tags "scope:api"
 
 ✔ Which unit test runner would you like to use? · jest
 ```
 
-```shell
+```bash
 nx g @nrwl/nest:resource --project=api-feature-product-category --type="graphql-code-first" --crud --name product-category
 ```
 

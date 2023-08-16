@@ -1,6 +1,6 @@
 ## install packages
 
-```shell
+```bash
 npm i @next/font
 ```
 

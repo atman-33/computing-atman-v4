@@ -1,7 +1,8 @@
 ## bcrypt
 
 ### install packages
-```shell
+
+```bash
 npm i bcrypt
 npm i -D @types/bcrypt
 ```
@@ -32,14 +33,16 @@ _________________________________________________
 ## helmet
 
 ### install packages
-```shell
+
+```bash
 npm i --save @fastify/helmet
 ```
 
-- register helmet  
-- enable cors
+* register helmet  
+* enable cors
 
-`apps/api/src/main.ts`  
+ `apps/api/src/main.ts`
+
 ```ts
 ...
 import helmet from '@fastify/helmet'

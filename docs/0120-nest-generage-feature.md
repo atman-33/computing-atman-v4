@@ -1,6 +1,6 @@
 ## generate types
 
-```shell
+```bash
 npx nx generate @nx/js:library generated-db-types --directory=libs/api --importPath=@libs/api/generated-db-types --tags=scope:api --bundler=swc
 
 ✔ Which unit test runner would you like to use? · none
@@ -8,7 +8,7 @@ npx nx generate @nx/js:library generated-db-types --directory=libs/api --importP
 
 ### install package
 
-```shell
+```bash
 npm i -D prisma-nestjs-graphql
 ```
 
@@ -18,7 +18,7 @@ npm i -D prisma-nestjs-graphql
 
 ### prisma generate
 
-```shell
+```bash
 npx prisma generate
 ```
 
@@ -26,7 +26,7 @@ _________________________________________________
 
 ## generate feature(ex. feature-user)
 
-```shell
+```bash
 nx generate @nrwl/js:library --name=feature-user --directory=api --bundler=swc --tags "scope:api"
 
 npx nx generate @nx/js:library feature-user --directory=libs/api --importPath=@libs/api/feature-user --tags=scope:api --bundler=swc
@@ -41,7 +41,7 @@ npx nx generate @nx/js:library feature-user --directory=libs/api --importPath=@l
 
 ### generate resolver  
 
-```shell
+```bash
 nx g @nrwl/nest:resource --project=api-feature-user --directory=lib --type="graphql-code-first" --crud --name user
 ```
 

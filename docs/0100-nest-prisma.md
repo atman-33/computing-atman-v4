@@ -1,6 +1,6 @@
 ## generate libs data-access-db 
 
-```shell
+```bash
 npx nx generate @nx/js:library data-access-db --directory=libs/api --importPath=@libs/api/data-access-db --tags=scope:api --bundler=swc
 
 ✔ Which unit test runner would you like to use? · none
@@ -10,7 +10,7 @@ delete `api-data-access-db.ts`
 
 ## install package
 
-```shell
+```bash
 npm i -D prisma env-cmd prisma-nestjs-graphql
 npm i @prisma/client
 ```
@@ -98,7 +98,7 @@ add `db:dockers:dev` to scripts
  ## prisma migration
  migration  
 
-```shell
+```bash
 npm db:migrate:dev
  ```
 
@@ -106,6 +106,6 @@ npm db:migrate:dev
 
 run prisma studio  
 
-```shell
+```bash
 npm db:studio
  ```

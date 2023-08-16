@@ -1,6 +1,6 @@
 ## generate utils-shared
 
-```shell
+```bash
 nx generate @nrwl/js:library --name=utils-shared --directory=web --bundler=swc --tags "scope:web" 
 
 ✔ Which unit test runner would you like to use? · jest

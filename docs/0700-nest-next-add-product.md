@@ -4,7 +4,7 @@
 
 * create files  
 
-```shell
+```bash
 nx generate @nrwl/js:library --name=feature-product --directory=api --bundler=swc --tags "scope:api"
 
 nx g @nrwl/nest:resource --project=api-feature-product --type="graphql-code-first" --crud --name product

@@ -1,12 +1,12 @@
 ## install packages
 
-```shell
+```bash
 npm i -D @nx/next
 ```
 
 ## generate next web
 
-```shell
+```bash
 nx g @nx/next:app web --tags "scope:web"
 
 ✔ Which stylesheet format would you like to use? · css
@@ -21,7 +21,7 @@ nx g @nx/next:app web --tags "scope:web"
 
 ## nx migrate latest
 
-```shell
+```bash
 nx migrate latest
 npm i
 ```

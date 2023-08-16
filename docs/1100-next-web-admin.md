@@ -1,6 +1,6 @@
 ## create next admin app
 
-```shell
+```bash
 nx g @nx/next:app web-admin
 
 ✔ Would you like to use the App Router (recommended)? (Y/n) · true
@@ -76,7 +76,7 @@ CLERK_SECRET_KEY=sk_test_18CZx3gPbqU45EJd0sKf3kfGLUVh4Ytm28rBL2ofB2
 
 ## install packates
 
-```shell
+```bash
 npm install @clerk/nextjs
 ```
 
@@ -120,7 +120,7 @@ export const config = {
 
 ## install packages to use daisyui
 
-```shell
+```bash
 npm i -D daisyui
 ```
 
@@ -174,7 +174,7 @@ export default async function DashboardPage() {
 
 ## install packages
 
-```shell
+```bash
 npm i @fastify/cookie
 ```
 
@@ -200,14 +200,14 @@ _________________________________________________
 
 ## install jsonwebtoken
 
-```shell
+```bash
 npm i jsonwebtoken
 npm i --save-dev @types/jsonwebtoken
 ```
 
 ## generate feature auth
 
-```shell
+```bash
 nx generate @nrwl/js:library --name=feature-auth --directory=api --bundler=swc --tags "scope:api"
 
 ✔ Which unit test runner would you like to use? · jest

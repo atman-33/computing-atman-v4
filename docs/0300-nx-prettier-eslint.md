@@ -1,6 +1,6 @@
 ## install packages
 
-```shell
+```bash
 npm i -D eslint@latest eslint-plugin-prettier eslint-plugin-unicorn @typescript-eslint/parser @typescript-eslint/eslint-plugin eslint-plugin-unused-imports prettier-plugin-tailwindcss
 ```
 
@@ -8,7 +8,7 @@ npm i -D eslint@latest eslint-plugin-prettier eslint-plugin-unicorn @typescript-
 
 ex.  
 
-```shell
+```bash
 npm i -D prettier@latest --force
 npm i -D @typescript-eslint/eslint-plugin --force
 ```
@@ -160,6 +160,6 @@ libs/api/generated-db-types/src/index.ts
 
 ## lint fix all command
 
-```shell
+```bash
 nx affected:lint --fix --all
 ```

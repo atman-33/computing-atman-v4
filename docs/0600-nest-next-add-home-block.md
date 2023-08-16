@@ -16,7 +16,7 @@
 
 ex. generate feature-home-block  
 
-```shell
+```bash
 nx generate @nrwl/js:library --name=feature-home-block --directory=api --bundler=swc --tags "scope:api" 
 
 ✔ Which unit test runner would you like to use? · jest
@@ -25,7 +25,7 @@ nx generate @nrwl/js:library --name=feature-home-block --directory=api --bundler
 
 * delete created files in `libs/api/feature-home-block/src/lib`
 
-```shell
+```bash
 nx g @nrwl/nest:resource --project=api-feature-home-block --type="graphql-code-first" --crud --name home-block
 ```
 

@@ -1,6 +1,6 @@
 ## install packages
 
-```shell
+```bash
 npm i @nestjs/graphql @nestjs/mercurius graphql mercurius @mercuriusjs/gateway @nestjs/platform-fastify class-transformer class-validator
 ```
 

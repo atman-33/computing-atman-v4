@@ -4,25 +4,25 @@
 
 run dev backend  
 
-```shell
+```bash
 nx serve api
 ```
 
 run dev frontend  
 
-```shell
+```bash
 nx serve web
 ```
 
 run dev front and back  
 
-```shell
+```bash
 npm run dev
 ```
 
 ## build command
 
-```shell
+```bash
 nx build web
 ```
 
@@ -30,43 +30,43 @@ nx build web
 
 check PID  
 
-```shell
+```bash
 lsof -i :3000
 ```
 
 kill PID  
 
-```shell
+```bash
 kill <PID>
 ```
 
 ## show affected projects
 
-```shell
+```bash
 nx show projects --affected --target=build --select=projects
 ```
 
 ## run test
 
-```shell
+```bash
 nx run web:test
 ```
 
 ## nx graph
 
-```shell
+```bash
 nx graph
 ```
 
 ## lint fix all
 
-```shell
+```bash
 nx affected:lint --fix --all
 ```
 
 ## nx migrate etc
 
-```shell
+```bash
 nx migrate latest
 npx nx migrate --run-migrations
 npm i
@@ -74,7 +74,7 @@ npm i
 
 > if you need get latest next.js...
 
-```shell
+```bash
 npm i next@latest
 ```
 
