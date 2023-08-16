@@ -1,8 +1,13 @@
+import { gql } from '../data-access/graphql-client';
+
 export default async function Index() {
-  /*
-   * Replace the elements below with your own.
-   *
-   * Note: The corresponding styles are in the ./index.css file.
-   */
-  return <div className="text-yellow-500">Top page</div>;
+  const { users } = await gql.GetUsers();
+
+  return users.map((user) => {
+    return (
+      <div key={user.id} className="text-yellow-500">
+        {user.name}
+      </div>
+    );
+  });
 }
