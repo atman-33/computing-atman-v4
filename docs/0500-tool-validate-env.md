@@ -1,13 +1,13 @@
 ## validate env files
 
-* `tools/environment/validate-api-env.ts`
-* `tools/environment/validate-web-env.ts`
+- `tools/environment/validate-api-env.ts`
+- `tools/environment/validate-web-env.ts`
 
 ## add run scripts
 
-add validate env scripts  
+add validate env scripts
 
- `package.json`
+`package.json`
 
 ```json
   "scripts": {
@@ -18,7 +18,7 @@ add validate env scripts
     "validate:api-env": "npx env-cmd -f .env.local ts-node --project tools/tsconfig.tools.json tools/environment/validate-api-env.ts",
 ```
 
-_________________________________________________
+---
 
 # In the case of adding env
 

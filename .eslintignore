@@ -1,4 +1,5 @@
 node_modules
+docs
 
 libs/web/data-access-graphql/src/lib/data-access.gql.gen.ts
 libs/web/data-access-graphql/src/lib/types.ts
