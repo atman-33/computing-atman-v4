@@ -33,6 +33,7 @@
   },
   "private": true,
   "dependencies": {
+    "@clerk/nextjs": "^4.23.2",
     "@fastify/cookie": "^9.0.4",
     "@fastify/helmet": "^11.0.0",
     "@formatjs/intl-localematcher": "^0.4.0",
@@ -98,6 +99,7 @@
     "autoprefixer": "10.4.13",
     "babel-jest": "^29.4.1",
     "cypress": "^12.16.0",
+    "daisyui": "^3.5.1",
     "env-cmd": "^10.1.0",
     "eslint": "^8.46.0",
     "eslint-config-next": "13.4.1",

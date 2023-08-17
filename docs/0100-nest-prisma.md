@@ -17,19 +17,19 @@ npm i @prisma/client
 
 ## generate schema.prisma
 
-`data-access-db/src/lib/schema.prisma`
+ `data-access-db/src/lib/schema.prisma`
 
 ## generate prisma.service.ts
 
-`data-access-db/src/lib/prisma.service.ts`
+ `data-access-db/src/lib/prisma.service.ts`
 
 ## generate prisma.module.ts
 
-`data-access-db/src/lib/prisma.module.ts`
+ `data-access-db/src/lib/prisma.module.ts`
 
 ## update index.ts
 
-`data-access-db/src/index.ts`
+ `data-access-db/src/index.ts`
 
 ```ts
 export * from './lib/prisma.module';
@@ -38,7 +38,7 @@ export * from './lib/prisma.service';
 
 ## update package.json
 
-`/package.json`
+ `/package.json`
 
 ```json
   ...
@@ -53,15 +53,17 @@ export * from './lib/prisma.service';
 
 add db url to .env.local
 
-`/.env.local`
+ `/.env.local`
 
 ```text
 ATMAN_DB_URL=postgresql://postgres:mysecretpassword@localhost:5555/atman-db?schema=public
 ```
 
+> .env.local to .gitignore
+
 ## create docker-compose
 
-`/tools/atman-environment/dev.docker-compose.yml`
+ `/tools/atman-environment/dev.docker-compose.yml`
 
 ```yml
 version: '3.9'
@@ -85,7 +87,7 @@ add `db:dockers:dev` to scripts
 
 > run db:dockers:dev => create db.
 
-`/package.json`
+ `/package.json`
 
 ```json
   "scripts": {

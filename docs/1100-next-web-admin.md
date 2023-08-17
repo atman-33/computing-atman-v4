@@ -3,6 +3,7 @@
 ```bash
 nx g @nx/next:app web-admin
 
+✔ Which E2E test runner would you like to use? · cypress
 ✔ Would you like to use the App Router (recommended)? (Y/n) · true
 ```
 
@@ -12,12 +13,12 @@ nx g @nx/next:app web-admin
 
 ## delete api folder
 
-delte `apps/web-admin/app/api`
+delete `apps/web-admin/app/api`
 
 ## delte global.css and module.css
 
-* delte `apps/web-admin/app/global.css`
-* delte `apps/web-admin/app/page.module.css`
+* delete `apps/web-admin/app/global.css`
+* delete `apps/web-admin/app/page.module.css`
 * fix import in `apps/web-admin/app/layout.tsx`
 
 ```ts
@@ -33,6 +34,10 @@ import '../styles/global.css';
 ```
 
 ## copy paste somefiles frome web
+
+```bash
+nx g @nx/react:setup-tailwind --project=web-admin
+```
 
 paste from web to web-admin
 
@@ -63,7 +68,7 @@ paste from web to web-admin
 
 * create new app
 
-  + application name => okkino-dev
+  + application name => computing-atman-dev
   + sign in => Google
 
 * copy keys and paste to .env.local
@@ -71,8 +76,8 @@ paste from web to web-admin
 ex.
 
 ```text
-NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=pk_test_bW9yYWwtY2hpZ2dlci0zOC5jbGVyay5hY2NvdW50cy5kZXYk
-CLERK_SECRET_KEY=sk_test_18CZx3gPbqU45EJd0sKf3kfGLUVh4Ytm28rBL2ofB2
+NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=xxx
+CLERK_SECRET_KEY=xxx
 ```
 
 ## install packates
@@ -222,6 +227,8 @@ npx nx generate @nx/js:library api-feature-auth --directory=libs/api/feature-aut
   ex. `libs/api/feature-product/src/lib/product.resolver.ts`
 
 ## get api keys from clerk.com
+
+https://dashboard.clerk.com/  
 
 move to `clerk.com > {your app} > API Keys > Advanced > JWT public key > PEM public key`
 
