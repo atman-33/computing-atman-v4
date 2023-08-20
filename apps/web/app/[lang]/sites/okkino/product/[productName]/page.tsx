@@ -1,7 +1,7 @@
-import { gql } from '../../../../data-access/graphql-client';
-import { getDictionary } from '../../../../i18n/get-dictionary';
-import { Locale } from '../../../../i18n/i18n-config';
-import { AddToCartSection } from './components/add-to-card-section';
+import { gql } from '../../../../../../data-access/graphql-client';
+import { getDictionary } from '../../../../../../i18n/get-dictionary';
+import { Locale } from '../../../../../../i18n/i18n-config';
+import { AddToCartSection } from './_components/add-to-card-section';
 
 interface IProductPageProps {
   params: { productName: string; lang: Locale };

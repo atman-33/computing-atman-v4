@@ -1,4 +1,5 @@
-import { Locale } from '../../../../i18n/i18n-config';
+import { Locale } from '../../../../../../i18n/i18n-config';
+import { RouteName } from './constants';
 
 export const getTranslationSafe = (translations: Record<string, string>, itemKeyName: string) => {
   if (itemKeyName in translations) {
@@ -16,5 +17,5 @@ export const redirectedPathName = (pathName: string, newLocale: string) => {
 };
 
 export const getI18nNavigationPath = (locale: Locale, path: string) => {
-  return `/${locale}/${path}`;
+  return `/${locale}/${RouteName.root}/${path}`;
 };

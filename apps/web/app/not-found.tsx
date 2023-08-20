@@ -2,7 +2,7 @@
 import Image from 'next/image';
 import { usePathname, useRouter } from 'next/navigation';
 import { Locale, i18n } from '../i18n/i18n-config';
-import { Button } from './shared-components/button';
+import { Button } from './_shared-components/button';
 
 export default function NotFound() {
   const pathname = usePathname();

@@ -1,8 +1,8 @@
 import Link from 'next/link';
-import { getDictionary } from '../../../../../i18n/get-dictionary';
-import { Locale } from '../../../../../i18n/i18n-config';
-import { RouteName } from '../../../components/common/constants';
-import { getI18nNavigationPath } from '../../../components/common/utils';
+import { getDictionary } from '../../../../../../../i18n/get-dictionary';
+import { Locale } from '../../../../../../../i18n/i18n-config';
+import { RouteName } from '../../../_components/common/constants';
+import { getI18nNavigationPath } from '../../../_components/common/utils';
 
 interface IProductPageProps {
   params: { productName: string; lang: Locale };

@@ -1,13 +1,13 @@
 import { rgbToDataUrl } from '@libs/web/utils-shared';
 import Image from 'next/image';
 import Link from 'next/link';
-import { gql } from '../../../../data-access/graphql-client';
-import { webEnv } from '../../../../environments/environment';
-import { i18n, Locale } from '../../../../i18n/i18n-config';
-import { Price } from '../../../shared-components/price';
-import { RouteName } from '../../components/common/constants';
-import { getI18nNavigationPath } from '../../components/common/utils';
-import { ProductColors } from './components/product-colors';
+import { gql } from '../../../../../../data-access/graphql-client';
+import { webEnv } from '../../../../../../environments/environment';
+import { i18n, Locale } from '../../../../../../i18n/i18n-config';
+import { Price } from '../../../../../_shared-components/price';
+import { RouteName } from '../../_components/common/constants';
+import { getI18nNavigationPath } from '../../_components/common/utils';
+import { ProductColors } from './_components/product-colors';
 import { ALL_CATEGORY } from './constants';
 
 const IMAGES_ON_SCREEN = 6;

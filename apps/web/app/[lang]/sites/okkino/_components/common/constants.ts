@@ -1,5 +1,6 @@
 export const RouteName = {
-  home: '/',
+  root: 'sites/okkino',
+  home: '/sites/okkino',
   shop: 'shop',
   product: 'product',
   sizeGuide: 'size-guide'

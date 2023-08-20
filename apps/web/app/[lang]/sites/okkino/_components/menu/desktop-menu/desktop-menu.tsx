@@ -1,9 +1,10 @@
 'use client';
 
-import { GetProductCategories } from '@okkino/web/data-access-graphql';
+import { GetProductCategories } from '@libs/web/data-access-graphql';
 import { FC } from 'react';
-import { Locale } from '../../../../../i18n/i18n-config';
+import { Locale } from '../../../../../../../i18n/i18n-config';
 import { ALL_CATEGORY } from '../../../shop/[category]/constants';
+import { RouteName } from '../../common/constants';
 import { DesktopSubmenu } from './desktop-submenu';
 
 interface IProps {
@@ -22,7 +23,7 @@ export const DesktopMenu: FC<IProps> = (props) => {
         menuName={navigationTranslation.shop}
         itemsList={[ALL_CATEGORY, ...productCategories.map((category) => category.name)]}
         translations={productCategoriesTranslation}
-        getNavigationPath={(itemKeyName) => `/${locale}/shop/${itemKeyName}`}
+        getNavigationPath={(itemKeyName) => `/${locale}/${RouteName.root}/shop/${itemKeyName}`}
       />
     </div>
   );

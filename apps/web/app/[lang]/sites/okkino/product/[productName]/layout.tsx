@@ -1,9 +1,9 @@
 import { rgbToDataUrl } from '@libs/web/utils-shared';
 import Image from 'next/image';
 import { ReactNode } from 'react';
-import { gql } from '../../../../data-access/graphql-client';
-import { webEnv } from '../../../../environments/environment';
-import { i18n, Locale } from '../../../../i18n/i18n-config';
+import { gql } from '../../../../../../data-access/graphql-client';
+import { webEnv } from '../../../../../../environments/environment';
+import { i18n, Locale } from '../../../../../../i18n/i18n-config';
 
 const IMAGES_ON_SCREEN = 2;
 

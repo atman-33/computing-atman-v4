@@ -1,11 +1,12 @@
 'use client';
 
-import { GetProductCategories } from '@okkino/web/data-access-graphql';
+import { GetProductCategories } from '@libs/web/data-access-graphql';
 import Image from 'next/image';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useState } from 'react';
-import { i18n, Locale } from '../../../../../i18n/i18n-config';
+import { i18n, Locale } from '../../../../../../../i18n/i18n-config';
+import { RouteName } from '../../common/constants';
 import { redirectedPathName } from '../../common/utils';
 import { MobileSubmenu } from './moblie-submenu';
 
@@ -60,7 +61,9 @@ export default function MobileMenu(props: IProps) {
                     itemsList={productCategories.map((category) => category.name)}
                     translations={productCategoriesTranslation}
                     onSubmenuClick={handleSubmenuClick}
-                    getNavigationPath={(itemKeyName) => `/${locale}/shop/${itemKeyName}`}
+                    getNavigationPath={(itemKeyName) =>
+                      `/${locale}/${RouteName.root}/shop/${itemKeyName}`
+                    }
                   />
                 )}
               </li>
