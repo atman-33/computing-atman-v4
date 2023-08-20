@@ -13,6 +13,8 @@ npm i @formatjs/intl-localematcher server-only
 
  `apps/web/middleware.ts`
 
+ > you should add image files in public. do not forget! 
+
 ## create get-dictionary
 
  `apps/web/i18n/get-dictionary.ts`

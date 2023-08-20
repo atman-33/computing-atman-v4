@@ -40,7 +40,7 @@ export default async function RootLayout({
           <nav className="flex h-20 items-center justify-between md:h-28 lg:h-36">
             <Link href={`/${params.lang}/${RouteName.root}`}>
               <Image
-                src={'/logo.svg'}
+                src={'/logo-okkino.svg'}
                 width={85}
                 height={15}
                 alt={'logo'}
