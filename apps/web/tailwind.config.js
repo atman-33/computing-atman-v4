@@ -5,7 +5,9 @@ const { join } = require('node:path');
 module.exports = {
   content: [
     join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
-    ...createGlobPatternsForDependencies(__dirname)
+    ...createGlobPatternsForDependencies(__dirname),
+    // for pliny
+    './node_modules/pliny/**/*.js'
   ],
   theme: {
     extend: {

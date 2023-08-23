@@ -4,10 +4,10 @@ import { GetProduct, GetProductLengths } from '@libs/web/data-access-graphql';
 import Link from 'next/link';
 import { FC, useState } from 'react';
 import { Locale } from '../../../../../../../i18n/i18n-config';
-import { Button } from '../../../../../../_shared-components/button';
-import { Price } from '../../../../../../_shared-components/price';
+import { Button } from '../../../_components/button';
 import { RouteName } from '../../../_components/common/constants';
 import { getI18nNavigationPath } from '../../../_components/common/utils';
+import { Price } from '../../../_components/price';
 import { ProductPropsSelector } from './product-props-selector';
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment

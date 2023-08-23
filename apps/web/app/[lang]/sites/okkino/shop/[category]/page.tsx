@@ -4,9 +4,9 @@ import Link from 'next/link';
 import { gql } from '../../../../../../data-access/graphql-client';
 import { webEnv } from '../../../../../../environments/environment';
 import { i18n, Locale } from '../../../../../../i18n/i18n-config';
-import { Price } from '../../../../../_shared-components/price';
 import { RouteName } from '../../_components/common/constants';
 import { getI18nNavigationPath } from '../../_components/common/utils';
+import { Price } from '../../_components/price';
 import { ProductColors } from './_components/product-colors';
 import { ALL_CATEGORY } from './constants';
 
