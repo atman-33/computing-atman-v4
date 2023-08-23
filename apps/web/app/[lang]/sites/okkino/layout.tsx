@@ -34,43 +34,41 @@ export default async function RootLayout({
   const { productCategories } = await gql.GetProductCategories();
 
   return (
-    <html lang={params.lang} className={lato.className}>
-      <body className="flex flex-col items-center">
-        <div className="w-full max-w-screen-2xl pl-6 pr-6 md:pl-14 md:pr-14">
-          <nav className="flex h-20 items-center justify-between md:h-28 lg:h-36">
-            <Link href={`/${params.lang}/${RouteName.root}`}>
-              <Image
-                src={'/logo-okkino.svg'}
-                width={85}
-                height={15}
-                alt={'logo'}
-                className="md:h-5 md:w-28"
-                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-              />
-            </Link>
+    <div className="flex flex-col items-center">
+      <div className="w-full max-w-screen-2xl pl-6 pr-6 md:pl-14 md:pr-14">
+        <nav className="flex h-20 items-center justify-between md:h-28 lg:h-36">
+          <Link href={`/${params.lang}/${RouteName.root}`}>
+            <Image
+              src={'/logo-okkino.svg'}
+              width={85}
+              height={15}
+              alt={'logo'}
+              className="md:h-5 md:w-28"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </Link>
 
-            <div className="flex items-center gap-10">
-              <DesktopMenu
-                navigationTranslation={t.navigation}
-                productCategoriesTranslation={t.product_categories}
-                productCategories={productCategories}
-                locale={params.lang}
-              />
+          <div className="flex items-center gap-10">
+            <DesktopMenu
+              navigationTranslation={t.navigation}
+              productCategoriesTranslation={t.product_categories}
+              productCategories={productCategories}
+              locale={params.lang}
+            />
 
-              <MobileMenu
-                navigationTranslation={t.navigation}
-                productCategoriesTranslation={t.product_categories}
-                productCategories={productCategories}
-                locale={params.lang}
-              />
+            <MobileMenu
+              navigationTranslation={t.navigation}
+              productCategoriesTranslation={t.product_categories}
+              productCategories={productCategories}
+              locale={params.lang}
+            />
 
-              <LocaleSwitcher locale={params.lang} />
-            </div>
-          </nav>
-          {children}
-          <footer className="h-20 md:h-28 lg:h-36" />
-        </div>
-      </body>
-    </html>
+            <LocaleSwitcher locale={params.lang} />
+          </div>
+        </nav>
+        {children}
+        <footer className="h-20 md:h-28 lg:h-36" />
+      </div>
+    </div>
   );
 }

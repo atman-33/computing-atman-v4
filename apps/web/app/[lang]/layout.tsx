@@ -9,6 +9,7 @@ import Footer from '../../components/footer';
 import Header from '../../components/header';
 import SectionContainer from '../../components/section-container';
 import siteMetadata from '../../data/site-metadata';
+import { Locale, i18n } from '../../i18n/i18n-config';
 import { ThemeProviders } from './_components/theme-providers';
 
 const lato = Lato({
@@ -58,13 +59,19 @@ export const metadata: Metadata = {
   }
 };
 
-export default function RootLayout({ children }: { children: ReactNode }) {
+export async function generateStaticParams() {
+  return i18n.locales.map((locale) => ({ lang: locale }));
+}
+
+export default async function RootLayout({
+  children,
+  params
+}: {
+  children: ReactNode;
+  params: { lang: Locale };
+}) {
   return (
-    <html
-      lang={siteMetadata.language}
-      className={`${lato.className} scroll-smooth`}
-      suppressHydrationWarning
-    >
+    <html lang={params.lang} className={`${lato.className} scroll-smooth`} suppressHydrationWarning>
       <link rel="apple-touch-icon" sizes="76x76" href="/static/favicons/apple-touch-icon.png" />
       <link rel="icon" type="image/png" sizes="32x32" href="/favicon.ico" />
       <link rel="icon" type="image/png" sizes="16x16" href="/favicon.ico" />
