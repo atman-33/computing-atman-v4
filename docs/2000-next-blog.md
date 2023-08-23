@@ -8,4 +8,5 @@
 ```bash
 npm i pliny
 npm i github-slugger
+npm i @tailwindcss/typography
 ```

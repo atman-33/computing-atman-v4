@@ -2,6 +2,8 @@
 const { createGlobPatternsForDependencies } = require('@nx/react/tailwind');
 const { join } = require('node:path');
 
+const colors = require('tailwindcss/colors');
+
 module.exports = {
   content: [
     join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
@@ -9,27 +11,66 @@ module.exports = {
     // for pliny
     './node_modules/pliny/**/*.js'
   ],
+  darkMode: 'class',
   theme: {
     extend: {
+      lineHeight: {
+        11: '2.75rem',
+        12: '3rem',
+        13: '3.25rem',
+        14: '3.5rem'
+      },
       screens: {
         '3xl': '1600px'
       },
       colors: {
+        primary: colors.pink,
+        gray: colors.gray,
         black: '#262217',
-        beigeLight: '#FFFDF8',
-        gray: {
-          100: '#EAE9E8',
-          200: '#D4D3D1',
-          300: '#BEBDBA',
-          400: '#A8A7A2',
-          500: '#93918B',
-          600: '#7D7A74',
-          700: '#68655D',
-          800: '#514E45',
-          900: '#3C392F'
+        beigeLight: '#FFFDF8'
+      },
+      typography: ({ theme }) => ({
+        DEFAULT: {
+          css: {
+            a: {
+              color: theme('colors.primary.500'),
+              '&:hover': {
+                color: `${theme('colors.primary.600')}`
+              },
+              code: { color: theme('colors.primary.400') }
+            },
+            'h1,h2': {
+              fontWeight: '700',
+              letterSpacing: theme('letterSpacing.tight')
+            },
+            h3: {
+              fontWeight: '600'
+            },
+            code: {
+              color: theme('colors.indigo.500')
+            }
+          }
+        },
+        invert: {
+          css: {
+            a: {
+              color: theme('colors.primary.500'),
+              '&:hover': {
+                color: `${theme('colors.primary.400')}`
+              },
+              code: { color: theme('colors.primary.400') }
+            },
+            'h1,h2,h3,h4,h5,h6': {
+              color: theme('colors.gray.100')
+            }
+          }
         }
-      }
+      })
     }
   },
-  plugins: [require('tailwind-scrollbar-hide'), require('daisyui')]
+  plugins: [
+    require('tailwind-scrollbar-hide'),
+    require('daisyui'),
+    require('@tailwindcss/typography')
+  ]
 };
