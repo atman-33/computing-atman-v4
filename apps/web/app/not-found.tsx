@@ -18,7 +18,7 @@ export default function NotFound() {
     <html lang="en">
       <body className="flex h-screen flex-col items-center justify-center">
         <Image
-          src={'/logo.svg'}
+          src={'/static/logo.svg'}
           width={85}
           height={15}
           alt={'logo'}

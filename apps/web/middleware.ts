@@ -28,10 +28,10 @@ export function middleware(request: NextRequest) {
   // If you have one
   if (
     [
-      '/manifest.json',
-      '/favicon.ico',
-      '/logo.svg',
-      '/logo-okkino.svg'
+      '/manifest.json'
+      // '/favicon.ico',
+      // '/logo.svg',
+      // '/logo-okkino.svg'
 
       // Your other files in `public`
     ].includes(pathname)
@@ -55,5 +55,5 @@ export function middleware(request: NextRequest) {
 
 export const config = {
   // Matcher ignoring `/_next/` and `/api/`
-  matcher: ['/((?!api|_next/static|_next/image|favicon.ico).*)']
+  matcher: ['/((?!api|_next/static|_next/image|favicon.ico|static).*)']
 };
