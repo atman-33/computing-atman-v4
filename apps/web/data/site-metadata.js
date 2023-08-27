@@ -3,7 +3,7 @@ const siteMetadata = {
   title: 'Computing Atman Site',
   author: 'Atman',
   headerTitle: 'Computing Atman',
-  description: 'A blog created with Next.js and Tailwind.css',
+  description: 'A blog about system development and programming related to IT',
   language: 'en-us',
   theme: 'system', // system, dark or light
   siteUrl: 'https://tailwind-nextjs-starter-blog.vercel.app',
