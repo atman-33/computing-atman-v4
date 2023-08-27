@@ -1,6 +1,7 @@
+/* eslint-disable unicorn/prefer-module */
 //@ts-check
-// eslint-disable-next-line @typescript-eslint/no-var-requires, unicorn/prefer-module
 const { composePlugins, withNx } = require('@nx/next');
+const { withContentlayer } = require('next-contentlayer');
 
 /**
  * @type {import('@nx/next/plugins/with-nx').WithNxOptions}
@@ -24,7 +25,8 @@ const nextConfig = {
 
 const plugins = [
   // Add more Next.js plugins to this list if needed.
-  withNx
+  withNx,
+  withContentlayer
 ];
 
 // eslint-disable-next-line unicorn/prefer-module

@@ -6,10 +6,10 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: [
-    join(__dirname, '{src,pages,components,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
-    ...createGlobPatternsForDependencies(__dirname),
-    // for pliny
-    './node_modules/pliny/**/*.js'
+    join(__dirname, '{src,pages,components,layout,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
+    // add pliny
+    join(__dirname, '../../node_modules/pliny/**/*.js'),
+    ...createGlobPatternsForDependencies(__dirname)
   ],
   darkMode: 'class',
   theme: {
@@ -71,6 +71,7 @@ module.exports = {
   plugins: [
     require('tailwind-scrollbar-hide'),
     require('daisyui'),
+    require('@tailwindcss/forms'),
     require('@tailwindcss/typography')
   ]
 };

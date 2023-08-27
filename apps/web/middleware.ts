@@ -28,7 +28,8 @@ export function middleware(request: NextRequest) {
   // If you have one
   if (
     [
-      '/manifest.json'
+      '/manifest.json',
+      '/search.json'
       // '/favicon.ico',
       // '/logo.svg',
       // '/logo-okkino.svg'

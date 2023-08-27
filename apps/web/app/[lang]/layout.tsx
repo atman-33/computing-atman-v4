@@ -1,3 +1,4 @@
+import 'pliny/search/algolia.css';
 import '../../styles/global.css';
 
 import { Metadata } from 'next';
@@ -11,6 +12,9 @@ import SectionContainer from '../../components/section-container';
 import siteMetadata from '../../data/site-metadata';
 import { Locale, i18n } from '../../i18n/i18n-config';
 import { ThemeProviders } from './_components/theme-providers';
+
+// console.log(`process.cwd(): ${process.cwd()}`);
+// console.log(`__dirname: ${__dirname}`);
 
 const lato = Lato({
   weight: ['400', '700'],

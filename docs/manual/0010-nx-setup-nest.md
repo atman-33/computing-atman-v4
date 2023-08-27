@@ -30,7 +30,7 @@ npx create-nx-workspace@latest
 
 ## add scope:api tag
 
-`apps/api/project.json`
+ `apps/api/project.json`
 
 ```json
   "tags": [
@@ -40,7 +40,7 @@ npx create-nx-workspace@latest
 
 ## add start scripts
 
-`package.json`
+ `package.json`
 
 ```json
   ...
@@ -55,4 +55,20 @@ npx create-nx-workspace@latest
     "----TOOLS SECTION----": "-------------------------",
     "verify": "nx affected:lint --fix --all && nx format:write && nx format:check && nx affected --target=lint --fix --parallel=3 && npx nx affected --target=test --parallel=3 && nx affected --target=build --parallel=3 --exclude=web"
   ...
+```
+
+## add default paths
+
+ `tsconfig.base.json`
+
+```json
+    "paths": {
+      "@web/components/*": ["apps/web/components/*"],
+      "@web/data/*": ["apps/web/data/*"],
+      "@web/data-access/*": ["apps/web/data-access/*"],
+      "@web/environments/*": ["apps/web/environments/*"],
+      "@web/i18n/*": ["apps/web/i18n/*"],
+      "@web/layouts/*": ["apps/web/layouts/*"],
+      "@web/styles/*": ["apps/web/styles/*"],
+      ...
 ```

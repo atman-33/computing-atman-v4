@@ -10,23 +10,75 @@
     "importHelpers": true,
     "target": "es2015",
     "module": "esnext",
-    "lib": ["es2020", "dom"],
+    "lib": [
+      "es2020",
+      "dom"
+    ],
     "skipLibCheck": true,
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@libs/api/data-access-db": ["libs/api/data-access-db/src/index.ts"],
-      "@libs/api/feature-auth": ["libs/api/feature-auth/src/index.ts"],
-      "@libs/api/feature-home-block": ["libs/api/feature-home-block/src/index.ts"],
-      "@libs/api/feature-image": ["libs/api/feature-image/src/index.ts"],
-      "@libs/api/feature-product": ["libs/api/feature-product/src/index.ts"],
-      "@libs/api/feature-product-category": ["libs/api/feature-product-category/src/index.ts"],
-      "@libs/api/feature-product-length": ["libs/api/feature-product-length/src/index.ts"],
-      "@libs/api/feature-user": ["libs/api/feature-user/src/index.ts"],
-      "@libs/api/generated-db-types": ["libs/api/generated-db-types/src/index.ts"],
-      "@libs/web/data-access-graphql": ["libs/web/data-access-graphql/src/index.ts"],
-      "@libs/web/utils-shared": ["libs/web/utils-shared/src/index.ts"]
+      "@libs/api/data-access-db": [
+        "libs/api/data-access-db/src/index.ts"
+      ],
+      "@libs/api/feature-auth": [
+        "libs/api/feature-auth/src/index.ts"
+      ],
+      "@libs/api/feature-home-block": [
+        "libs/api/feature-home-block/src/index.ts"
+      ],
+      "@libs/api/feature-image": [
+        "libs/api/feature-image/src/index.ts"
+      ],
+      "@libs/api/feature-product": [
+        "libs/api/feature-product/src/index.ts"
+      ],
+      "@libs/api/feature-product-category": [
+        "libs/api/feature-product-category/src/index.ts"
+      ],
+      "@libs/api/feature-product-length": [
+        "libs/api/feature-product-length/src/index.ts"
+      ],
+      "@libs/api/feature-user": [
+        "libs/api/feature-user/src/index.ts"
+      ],
+      "@libs/api/generated-db-types": [
+        "libs/api/generated-db-types/src/index.ts"
+      ],
+      "@libs/web/data-access-graphql": [
+        "libs/web/data-access-graphql/src/index.ts"
+      ],
+      "@libs/web/utils-shared": [
+        "libs/web/utils-shared/src/index.ts"
+      ],
+      "@web/components/*": [
+        "apps/web/components/*"
+      ],
+      "@web/data/*": [
+        "apps/web/data/*"
+      ],
+      "@web/data-access/*": [
+        "apps/web/data-access/*"
+      ],
+      "@web/environments/*": [
+        "apps/web/environments/*"
+      ],
+      "@web/i18n/*": [
+        "apps/web/i18n/*"
+      ],
+      "@web/layouts/*": [
+        "apps/web/layouts/*"
+      ],
+      "@web/styles/*": [
+        "apps/web/styles/*"
+      ],
+      "contentlayer/generated": [
+        "./.contentlayer/generated"
+      ],
     }
   },
-  "exclude": ["node_modules", "tmp"]
+  "exclude": [
+    "node_modules",
+    "tmp"
+  ]
 }

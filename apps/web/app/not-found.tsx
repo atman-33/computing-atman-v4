@@ -1,17 +1,18 @@
 'use client';
 import Image from 'next/image';
-import { usePathname, useRouter } from 'next/navigation';
+import { usePathname } from 'next/navigation';
 import { Locale, i18n } from '../i18n/i18n-config';
 import { Button } from './[lang]/sites/okkino/_components/button';
 
 export default function NotFound() {
   const pathname = usePathname();
-  const router = useRouter();
+  // const router = useRouter();
   const locale = pathname.split('/')[1] as Locale;
 
   const handleClick = () => {
     i18n.locales.includes(locale);
-    router.push(i18n.locales.includes(locale) ? `/${locale}` : '/');
+    // router.push(i18n.locales.includes(locale) ? `/${locale}` : '/');
+    window.location.href = i18n.locales.includes(locale) ? `/${locale}` : '/';
   };
 
   return (

@@ -1,6 +1,6 @@
 import '../../../../styles/global.css';
 
-import { Lato } from 'next/font/google';
+// import { Lato } from 'next/font/google';
 import Image from 'next/image';
 import Link from 'next/link';
 import { ReactNode } from 'react';
@@ -12,12 +12,12 @@ import { DesktopMenu } from './_components/menu/desktop-menu/desktop-menu';
 import { LocaleSwitcher } from './_components/menu/locale-switcher';
 import MobileMenu from './_components/menu/mobile-menu/mobile-menu';
 
-const lato = Lato({
-  weight: ['400', '700'],
-  display: 'swap',
-  style: 'normal',
-  subsets: ['latin']
-});
+// const lato = Lato({
+//   weight: ['400', '700'],
+//   display: 'swap',
+//   style: 'normal',
+//   subsets: ['latin']
+// });
 
 export async function generateStaticParams() {
   return i18n.locales.map((locale) => ({ lang: locale }));
