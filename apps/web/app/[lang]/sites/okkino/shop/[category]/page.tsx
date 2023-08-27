@@ -40,7 +40,7 @@ export default async function Page(props: IProductPageProps) {
               <Image
                 src={`${storage.url}/${mainImage.imagePath}`}
                 alt={mainImage.title ?? ''}
-                className="hover:transition-{opacity} duration-300 ease-in-out hover:opacity-100 lg:hover:opacity-0"
+                className="hover:transition-{opacity} z-[+2] duration-300 ease-in-out hover:opacity-100 lg:hover:opacity-0"
                 placeholder="blur"
                 blurDataURL={rgbToDataUrl(r, g, b)}
                 title={mainImage.title ?? ''}
@@ -52,7 +52,7 @@ export default async function Page(props: IProductPageProps) {
               <Image
                 src={`${storage.url}/${hoverImage.imagePath}`}
                 alt={hoverImage.title ?? ''}
-                className={'index absolute left-0 top-0 z-[-1] hidden lg:inline '}
+                className={'index absolute left-0 top-0 z-[+1] hidden lg:inline '}
                 title={hoverImage.title ?? ''}
                 fill
                 sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"

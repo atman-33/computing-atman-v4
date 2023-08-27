@@ -25,11 +25,11 @@ export const DesktopSubmenu: FC<IProps> = (props) => {
 
   return (
     <span
-      className="relative cursor-pointer whitespace-nowrap text-xs uppercase text-black"
+      className="relative cursor-pointer whitespace-nowrap text-xs uppercase"
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
-      <span className="okkino-text-hover text-xs uppercase text-black">{menuName}</span>
+      <span className="okkino-text-hover text-xs uppercase">{menuName}</span>
 
       <div
         className={

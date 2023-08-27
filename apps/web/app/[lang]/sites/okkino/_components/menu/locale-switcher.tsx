@@ -26,7 +26,7 @@ export const LocaleSwitcher: FC<IProps> = (props) => {
 
   return (
     <span
-      className="relative cursor-pointer whitespace-nowrap text-xs uppercase text-black"
+      className="relative cursor-pointer whitespace-nowrap text-xs uppercase"
       onMouseOver={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
