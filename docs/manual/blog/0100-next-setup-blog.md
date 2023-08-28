@@ -3,12 +3,16 @@
 * https://github.com/timlrx/tailwind-nextjs-starter-blog  
 * https://github.com/timlrx/pliny  
 
+___________________________________________________________________________________________________
+
 ## install packages
 
 ```bash
 npm i pliny
 npm i github-slugger
 ```
+
+___________________________________________________________________________________________________
 
 ## switch theme
 
@@ -32,6 +36,8 @@ npm i @tailwindcss/forms
 * add className in body emelent
 * add ThemeProviders
 * use ThemeSwitch to change theme
+
+___________________________________________________________________________________________________
 
 ## content layer
 
@@ -94,6 +100,20 @@ export default makeSource({
   contentDirPath: 'apps/web/data',
 ```
 
+### update .eslintignore and .prettierignore
+
+ex.  
+
+```text
+apps/web/public/tag-data.json
+apps/web/public/search.json
+
+*.md
+*.mdx
+```
+
+___________________________________________________________________________________________________
+
 ## kbar or algolia search
 
 ### create SearchButton
@@ -124,12 +144,14 @@ export function middleware(request: NextRequest) {
 
  `apps/web/tailwind.config.js`
 
-* add layout and pliny
+* add layouts and pliny
 
 ```js
 module.exports = {
         content: [
-            join(__dirname, '{src,pages,components,layout,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
+            join(__dirname, '{src,pages,components,layouts,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
+            // add blog mdx
+            join(__dirname, './data/**/*.mdx'),
             // add pliny
             join(__dirname, '../../node_modules/pliny/**/*.js'),
             ...createGlobPatternsForDependencies(__dirname)

@@ -1,5 +1,5 @@
 import { ComputedFields, defineDocumentType, makeSource } from 'contentlayer/source-files';
-import GithubSlugger from 'github-slugger';
+import { slug } from 'github-slugger';
 import { writeFileSync } from 'node:fs';
 import path from 'node:path';
 import readingTime from 'reading-time';
@@ -45,12 +45,11 @@ const computedFields: ComputedFields = {
  * Count the occurrences of all tags across blog posts and write to json file
  */
 function createTagCount(allBlogs) {
-  const githubSlugger = new GithubSlugger();
   const tagCount: Record<string, number> = {};
   allBlogs.forEach((file) => {
     if (file.tags && file.draft !== true) {
       file.tags.forEach((tag) => {
-        const formattedTag = githubSlugger.slug(tag);
+        const formattedTag = slug(tag);
         if (formattedTag in tagCount) {
           tagCount[formattedTag] += 1;
         } else {
@@ -59,7 +58,7 @@ function createTagCount(allBlogs) {
       });
     }
   });
-  writeFileSync('./app/tag-data.json', JSON.stringify(tagCount));
+  writeFileSync('./public/tag-data.json', JSON.stringify(tagCount));
 }
 
 function createSearchIndex(allBlogs) {
