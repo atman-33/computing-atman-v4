@@ -6,7 +6,7 @@ const colors = require('tailwindcss/colors');
 
 module.exports = {
   content: [
-    join(__dirname, '{src,pages,components,layout,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
+    join(__dirname, '{src,pages,components,layouts,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
     // add pliny
     join(__dirname, '../../node_modules/pliny/**/*.js'),
     ...createGlobPatternsForDependencies(__dirname)

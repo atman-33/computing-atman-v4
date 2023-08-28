@@ -59,7 +59,7 @@ function createTagCount(allBlogs) {
       });
     }
   });
-  writeFileSync('./app/tag-data.json', JSON.stringify(tagCount));
+  writeFileSync('./public/tag-data.json', JSON.stringify(tagCount));
 }
 
 function createSearchIndex(allBlogs) {

@@ -3,4 +3,5 @@
 [x] pliny に tailwindcss を適用 => tailwind.config.js 修正が必要
 [x] Home画面にブログの最新記事を表示
 
+[x] ブログのページネーションを追加
 [] ブログ記事のページを作成

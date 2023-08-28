@@ -10,7 +10,7 @@ export default function Page() {
   const posts = allCoreContent(sortedPosts);
   return (
     <>
-      <Link href={'/sites/okkino'}>OKKINO(for debug)</Link>
+      <Link href={'/sites/okkino'}>{'>>> OKKINO ---- for debug'}</Link>
       <Hero
         title="For Programming"
         description={`This website is an information site on system development and programming related to IT.
