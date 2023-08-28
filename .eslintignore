@@ -4,3 +4,9 @@ docs
 libs/web/data-access-graphql/src/lib/data-access.gql.gen.ts
 libs/web/data-access-graphql/src/lib/types.ts
 libs/api/generated-db-types/src/index.ts
+
+apps/web/app/tag-data.json
+apps/web/public/search.json
+
+*.md
+*.mdx
