@@ -23,3 +23,7 @@ export const config = {
   matcher: ['/((?!api|_next/static|_next/image|favicon.ico|static).*)']
 };
 ```
+
+## not work router.push
+
+insted of router.push use window.location.href
