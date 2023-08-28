@@ -24,6 +24,21 @@ export const config = {
 };
 ```
 
-## not work router.push
+## Not work router.push
 
 insted of router.push use window.location.href
+
+## Build error => `next/font` error:
+
+ex.
+
+```bash
+app/layout.tsx
+`next/font` error:
+Failed to fetch `Lato` from Google Fonts.
+```
+
+Step: 
+
+1. delete `.next` folder
+2. build the project
