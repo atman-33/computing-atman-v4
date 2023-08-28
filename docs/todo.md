@@ -4,4 +4,16 @@
 [x] Home画面にブログの最新記事を表示
 
 [x] ブログのページネーションを追加
-[] ブログ記事のページを作成
+[x] ブログ記事のページを作成
+
+[x] ブログ記事一覧に画像（サムネイル）表示を追加
+
+[] About ページを作成
+[] Projects を削除して、Sites と Games に変更
+
+[] site-metadata を修正
+[] SEO 対策 head 情報表示
+[] SEO 対策 sitemap
+[] SEO 対策 robots.text
+
+[] railway と render.com にデプロイ

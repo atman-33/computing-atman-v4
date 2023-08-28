@@ -8,6 +8,7 @@ import { CoreContent } from 'pliny/utils/contentlayer';
 import { formatDate } from 'pliny/utils/formatDate';
 import Link from '../components/link';
 import Tag from '../components/tag';
+import Thumbnail from '../components/thumbnail';
 import siteMetadata from '../data/site-metadata';
 import { Locale } from '../i18n/i18n-config';
 import tagData from '../public/tag-data.json';
@@ -31,10 +32,6 @@ function Pagination({ totalPages, currentPage }: PaginationProps) {
   const basePath = pathname.split('/')[2];
   const prevPage = currentPage - 1 > 0;
   const nextPage = currentPage + 1 <= totalPages;
-
-  // console.log(`totalPages: ${totalPages}`);
-  // console.log(`currentPage: ${currentPage}`);
-  // console.log(`basePath: ${basePath}`);
 
   return (
     <div className="space-y-2 pb-8 pt-6 md:space-y-5">
@@ -135,10 +132,11 @@ export default function ListLayoutWithTags({
             <ul>
               {displayPosts.map((post) => {
                 // eslint-disable-next-line @typescript-eslint/no-shadow
-                const { path, date, title, summary, tags } = post;
+                const { path, date, title, summary, tags, images } = post;
                 return (
                   <li key={path} className="py-5">
                     <article className="flex flex-col space-y-2 xl:space-y-0">
+                      <Thumbnail images={images} />
                       <dl>
                         <dt className="sr-only">Published on</dt>
                         <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">

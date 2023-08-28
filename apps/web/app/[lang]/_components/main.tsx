@@ -1,13 +1,15 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
+import { Blog } from '.contentlayer/generated/types';
 import { formatDate } from 'pliny/utils/formatDate';
 import Link from '../../../components/link';
 import Tag from '../../../components/tag';
+import Thumbnail from '../../../components/thumbnail';
 import siteMetadata from '../../../data/site-metadata';
 // import NewsletterForm from 'pliny/ui/NewsletterForm';
 
 const MAX_DISPLAY = 5;
 
-export default function Home({ posts }: { posts: any }) {
+export default function Home({ posts }: { posts: Blog[] }) {
   return (
     <>
       <div className="divide-y divide-gray-200 dark:divide-gray-700">
@@ -21,8 +23,8 @@ export default function Home({ posts }: { posts: any }) {
         </div>
         <ul className="divide-y divide-gray-200 dark:divide-gray-700">
           {posts.length === 0 && 'No posts found.'}
-          {posts.slice(0, MAX_DISPLAY).map((post: any) => {
-            const { slug, date, title, summary, tags } = post;
+          {posts.slice(0, MAX_DISPLAY).map((post: Blog) => {
+            const { slug, date, title, summary, tags, images } = post;
             return (
               <li key={slug} className="py-12">
                 <article>
@@ -31,6 +33,7 @@ export default function Home({ posts }: { posts: any }) {
                       <dt className="sr-only">Published on</dt>
                       <dd className="text-base font-medium leading-6 text-gray-500 dark:text-gray-400">
                         <time dateTime={date}>{formatDate(date, siteMetadata.locale)}</time>
+                        <Thumbnail images={images} />
                       </dd>
                     </dl>
                     <div className="space-y-5 xl:col-span-3">
