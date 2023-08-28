@@ -150,6 +150,8 @@ export function middleware(request: NextRequest) {
 module.exports = {
         content: [
             join(__dirname, '{src,pages,components,layouts,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
+            // add blog mdx
+            join(__dirname, './data/**/*.mdx'),
             // add pliny
             join(__dirname, '../../node_modules/pliny/**/*.js'),
             ...createGlobPatternsForDependencies(__dirname)

@@ -19,8 +19,15 @@ interface LayoutProps {
 
 export default function PostMinimal({ content, next, prev, children }: LayoutProps) {
   const { slug, title, images } = content;
+  // console.log(`images: ${images?.toString()}`);
+  // console.log(`images: ${JSON.stringify(images)}`);
+
   const displayImage =
-    images && images.length > 0 ? images[0] : 'https://picsum.photos/seed/picsum/800/400';
+    images && images.length > 0 && typeof images[0] === 'object'
+      ? // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+        // @ts-ignore
+        images[0].url
+      : 'https://picsum.photos/seed/picsum/800/400';
 
   return (
     <SectionContainer>
