@@ -4,6 +4,8 @@
     "esbenp.prettier-vscode",
     "firsttris.vscode-jest-runner",
     "dbaeumer.vscode-eslint",
-    "unifiedjs.vscode-mdx"
+    "unifiedjs.vscode-mdx",
+    "xyc.vscode-mdx-preview",
+    "vadistic.mdx-inline"
   ]
 }
