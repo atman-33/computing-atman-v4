@@ -1,15 +1,20 @@
 # Add files here to ignore them from prettier formatting
 /dist
 /coverage
+/node_modules
+/tmp
+
 /docs
 
 # Ignore all files that generated
-libs/web/data-access-graphql/src/lib/data-access.gql.gen.ts
-libs/web/data-access-graphql/src/lib/types.ts
-libs/api/generated-db-types/src/index.ts
+/libs/web/data-access-graphql/src/lib/data-access.gql.gen.ts
+/libs/web/data-access-graphql/src/lib/types.ts
+/libs/api/generated-db-types/src/index.ts
 
-apps/web/public/tag-data.json
-apps/web/public/search.json
+/apps/web/public/tag-data.json
+/apps/web/public/search.json
+
+/.contentlayer
 
 *.md
 *.mdx
