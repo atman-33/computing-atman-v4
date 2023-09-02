@@ -1,12 +1,18 @@
-node_modules
-docs
+/dist
+/coverage
+/node_modules
+/tmp
 
-libs/web/data-access-graphql/src/lib/data-access.gql.gen.ts
-libs/web/data-access-graphql/src/lib/types.ts
-libs/api/generated-db-types/src/index.ts
+/docs
 
-apps/web/public/tag-data.json
-apps/web/public/search.json
+/libs/web/data-access-graphql/src/lib/data-access.gql.gen.ts
+/libs/web/data-access-graphql/src/lib/types.ts
+/libs/api/generated-db-types/src/index.ts
+
+/apps/web/public/tag-data.json
+/apps/web/public/search.json
+
+/.contentlayer
 
 *.md
 *.mdx

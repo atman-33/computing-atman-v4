@@ -5,6 +5,7 @@ const { join } = require('node:path');
 const colors = require('tailwindcss/colors');
 
 module.exports = {
+  mode: 'jit',
   content: [
     join(__dirname, '{src,pages,components,layouts,app}/**/*!(*.stories|*.spec).{ts,tsx,html}'),
     // add blog mdx
